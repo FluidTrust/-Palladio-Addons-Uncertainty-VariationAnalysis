@@ -7,8 +7,8 @@
         <throughput_CommunicationLinkResourceSpecification/>
       </communicationLinkResourceSpecifications_LinkingResource>
     </linkingResources__ResourceEnvironment>
-    <resourceContainer_ResourceEnvironment id="_qvz80ITgEeywmO_IpTxeAg" entityName="OnPremiseServer"/>
-    <resourceContainer_ResourceEnvironment id="_upfkIITgEeywmO_IpTxeAg" entityName="CloudServer"/>
+    <resourceContainer_ResourceEnvironment id="_qvz80ITgEeywmO_IpTxeAg" entityName="CloudServer EU"/>
+    <resourceContainer_ResourceEnvironment id="_upfkIITgEeywmO_IpTxeAg" entityName="CloudServer NonEU"/>
   </resourceenvironment:ResourceEnvironment>
   <emfprofileapplication:ProfileApplication>
     <stereotypeApplications xsi:type="org.palladiosimulator.dataflow.confidentiality.pcm.model.profile:Characterisable" appliedTo="_qvz80ITgEeywmO_IpTxeAg">

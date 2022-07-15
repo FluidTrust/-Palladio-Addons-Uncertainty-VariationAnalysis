@@ -20,7 +20,7 @@
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_I9a5AITjEeywmO_IpTxeAg" entityName="DatabaseService">
+  <components__Repository xsi:type="repository:BasicComponent" id="_I9a5AITjEeywmO_IpTxeAg" entityName="DatabaseServiceA">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_oGOkEITjEeywmO_IpTxeAg" entityName="DatabaseService.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_NkUzQARGEe2F--lV7xt4Rw" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
       <steps_Behaviour xsi:type="seff:StartAction" id="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_agZBEARGEe2F--lV7xt4Rw"/>
@@ -37,6 +37,13 @@
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_aPOUYARNEe2Fe7asWjw9lQ" entityName="DatabaseServiceB">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_dLTD8ARNEe2Fe7asWjw9lQ" entityName="DatabaseServiceB.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_dLfRMARNEe2Fe7asWjw9lQ" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_dLfRMQRNEe2Fe7asWjw9lQ" successor_AbstractAction="_dLfRMgRNEe2Fe7asWjw9lQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_dLfRMgRNEe2Fe7asWjw9lQ" predecessor_AbstractAction="_dLfRMQRNEe2Fe7asWjw9lQ"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_XGAZwITiEeywmO_IpTxeAg" entityName="DatabaseInterface">
