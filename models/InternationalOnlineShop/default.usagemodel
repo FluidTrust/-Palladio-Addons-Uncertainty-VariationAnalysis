@@ -11,11 +11,11 @@
           <inputParameterUsages_EntryLevelSystemCall>
             <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
               <specification_VariableCharacterisation specification="false"/>
-              <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_yHmUMARMEe2Fe7asWjw9lQ">
+              <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_tvnx4ARNEe2Fe7asWjw9lQ">
                 <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@0"/>
                 <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@0.literals@0"/>
               </lhs>
-              <rhs xsi:type="expressions:False" id="_yHmUMQRMEe2Fe7asWjw9lQ"/>
+              <rhs xsi:type="expressions:True" id="_tvnx4QRNEe2Fe7asWjw9lQ"/>
             </variableCharacterisation_VariableUsage>
             <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
           </inputParameterUsages_EntryLevelSystemCall>
