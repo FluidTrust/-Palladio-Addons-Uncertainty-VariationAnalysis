@@ -5,17 +5,17 @@
       <scenarioBehaviour_UsageScenario id="_LPwS4CHdEd6lJo4DCALHMw" entityName="defaultUsageScenarioBehaviour">
         <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_LPwS4SHdEd6lJo4DCALHMw" successor="_CTYOAARHEe2F--lV7xt4Rw"/>
         <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_CTYOAARHEe2F--lV7xt4Rw"/>
-        <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CTYOAARHEe2F--lV7xt4Rw" entityName="DeliveryAddressLevelSystemCall1" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw">
+        <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CTYOAARHEe2F--lV7xt4Rw" entityName="DeliveryAddressLevelSystemCall" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw">
           <providedRole_EntryLevelSystemCall href="default.system#_CWo80ITkEeywmO_IpTxeAg"/>
           <operationSignature__EntryLevelSystemCall href="default.repository#_Aej24ARGEe2F--lV7xt4Rw"/>
           <inputParameterUsages_EntryLevelSystemCall>
             <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
               <specification_VariableCharacterisation specification="false"/>
-              <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_5WQFgARHEe2F--lV7xt4Rw">
+              <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_FQY04ARLEe2Fe7asWjw9lQ">
                 <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@0"/>
                 <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@0.literals@0"/>
               </lhs>
-              <rhs xsi:type="expressions:False" id="_5WQFgQRHEe2F--lV7xt4Rw"/>
+              <rhs xsi:type="expressions:True" id="_FQY04QRLEe2Fe7asWjw9lQ"/>
             </variableCharacterisation_VariableUsage>
             <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
           </inputParameterUsages_EntryLevelSystemCall>

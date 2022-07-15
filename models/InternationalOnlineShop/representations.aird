@@ -48,7 +48,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_GG7sYCF-EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GLBDYARGEe2F--lV7xt4Rw" name="&lt;OnlineShop>&lt;provideDeliveryAddress> SEFF Diagram" repPath="#_GK-nIARGEe2F--lV7xt4Rw" changeId="e986dc07-855f-48fa-9a9e-6a3e333d6343">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GLBDYARGEe2F--lV7xt4Rw" name="&lt;OnlineShop>&lt;provideDeliveryAddress> SEFF Diagram" repPath="#_GK-nIARGEe2F--lV7xt4Rw" changeId="ca9f74cd-8e8c-4d2d-a2c8-8270843a1231">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="default.repository#_F4bekARGEe2F--lV7xt4Rw"/>
       </ownedRepresentationDescriptors>
@@ -59,7 +59,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_GWWocCF-EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GW4M9SF-EeqYabGLKRlfzA" name="UsageModel Diagram" repPath="#_GWXPgCF-EeqYabGLKRlfzA" changeId="53c4d35e-8d18-45d8-ba4d-288b7178c6ec">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GW4M9SF-EeqYabGLKRlfzA" name="UsageModel Diagram" repPath="#_GWXPgCF-EeqYabGLKRlfzA" changeId="f0fe0960-066c-4427-9ff6-cd4c6f1a2213">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']/@ownedRepresentations[name='UsageModel%20Diagram']"/>
         <target xmi:type="usagemodel:UsageModel" href="default.usagemodel#/0"/>
       </ownedRepresentationDescriptors>
@@ -843,9 +843,9 @@
                         <children xmi:type="notation:Node" xmi:id="_qU-etwRHEe2F--lV7xt4Rw" type="3009" element="_qU93pgRHEe2F--lV7xt4Rw">
                           <children xmi:type="notation:Node" xmi:id="_qU-eugRHEe2F--lV7xt4Rw" type="5004"/>
                           <children xmi:type="notation:Node" xmi:id="_qU-euwRHEe2F--lV7xt4Rw" type="7003">
-                            <children xmi:type="notation:Node" xmi:id="_5cwWIARHEe2F--lV7xt4Rw" type="3010" element="_5cq2lgRHEe2F--lV7xt4Rw">
-                              <styles xmi:type="notation:FontStyle" xmi:id="_5cwWIQRHEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-                              <layoutConstraint xmi:type="notation:Location" xmi:id="_5cwWIgRHEe2F--lV7xt4Rw"/>
+                            <children xmi:type="notation:Node" xmi:id="_FRqAMARLEe2Fe7asWjw9lQ" type="3010" element="_FRJC0ARLEe2Fe7asWjw9lQ">
+                              <styles xmi:type="notation:FontStyle" xmi:id="_FRqAMQRLEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+                              <layoutConstraint xmi:type="notation:Location" xmi:id="_FRqAMgRLEe2Fe7asWjw9lQ"/>
                             </children>
                             <styles xmi:type="notation:SortingStyle" xmi:id="_qU-evARHEe2F--lV7xt4Rw"/>
                             <styles xmi:type="notation:FilteringStyle" xmi:id="_qU-evQRHEe2F--lV7xt4Rw"/>
@@ -962,7 +962,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']/@ownedRepresentations[name='UsageModel%20Diagram']/@defaultLayer/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subNodeMappings[name='stop']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_DHfykARHEe2F--lV7xt4Rw" name="&lt;&lt;EntryLevelSystemCall>>&#xA;DeliveryAddressLevelSystemCall1&#xA;UserInterface.provideDeliveryAddress" outgoingEdges="_82TE1ARHEe2F--lV7xt4Rw" incomingEdges="_ENntIARHEe2F--lV7xt4Rw" childrenPresentation="VerticalStack">
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_DHfykARHEe2F--lV7xt4Rw" name="&lt;&lt;EntryLevelSystemCall>>&#xA;DeliveryAddressLevelSystemCall&#xA;UserInterface.provideDeliveryAddress" outgoingEdges="_82TE1ARHEe2F--lV7xt4Rw" incomingEdges="_ENntIARHEe2F--lV7xt4Rw" childrenPresentation="VerticalStack">
           <target xmi:type="usagemodel:EntryLevelSystemCall" href="default.usagemodel#_CTYOAARHEe2F--lV7xt4Rw"/>
           <semanticElements xmi:type="usagemodel:EntryLevelSystemCall" href="default.usagemodel#_CTYOAARHEe2F--lV7xt4Rw"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -997,10 +997,10 @@
                 <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@style"/>
               </ownedStyle>
               <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20UsageModel']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.usagemodel']/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subContainerMappings[name='entryLevelSystemCall']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']"/>
-              <ownedElements xmi:type="diagram:DNodeListElement" uid="_5cq2lgRHEe2F--lV7xt4Rw" name="userData.DataSensitivity.Personal := false">
+              <ownedElements xmi:type="diagram:DNodeListElement" uid="_FRJC0ARLEe2Fe7asWjw9lQ" name="userData.DataSensitivity.Personal := true">
                 <target xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.usagemodel#/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.2/@inputParameterUsages_EntryLevelSystemCall.0/@variableCharacterisation_VariableUsage.0"/>
                 <semanticElements xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.usagemodel#/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.2/@inputParameterUsages_EntryLevelSystemCall.0/@variableCharacterisation_VariableUsage.0"/>
-                <ownedStyle xmi:type="diagram:Square" uid="_5cug8ARHEe2F--lV7xt4Rw" showIcon="false" labelPosition="node" color="209,209,209">
+                <ownedStyle xmi:type="diagram:Square" uid="_FRQ-oARLEe2Fe7asWjw9lQ" showIcon="false" labelPosition="node" color="209,209,209">
                   <description xmi:type="style:SquareDescription" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20UsageModel']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.usagemodel']/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subContainerMappings[name='entryLevelSystemCall']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']/@style"/>
                 </ownedStyle>
                 <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20UsageModel']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.usagemodel']/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subContainerMappings[name='entryLevelSystemCall']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']"/>
@@ -1255,7 +1255,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIdL9wRGEe2F--lV7xt4Rw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_lIck4QRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIck4gRGEe2F--lV7xt4Rw" x="5" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIck4gRGEe2F--lV7xt4Rw" x="245" y="10" width="30" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_lIdL8ARGEe2F--lV7xt4Rw" type="2001" element="_lIbWwwRGEe2F--lV7xt4Rw">
           <children xmi:type="notation:Node" xmi:id="_lIdL8wRGEe2F--lV7xt4Rw" type="5002">
@@ -1266,127 +1266,169 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIdL-gRGEe2F--lV7xt4Rw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_lIdL8QRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIdL8gRGEe2F--lV7xt4Rw" y="60" width="40" height="40"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lIdL8gRGEe2F--lV7xt4Rw" x="280" y="370" width="40" height="40"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_nBtMkARGEe2F--lV7xt4Rw" type="2002" element="_nAo1kARGEe2F--lV7xt4Rw">
-          <children xmi:type="notation:Node" xmi:id="_nBtzoARGEe2F--lV7xt4Rw" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_nBtzoQRGEe2F--lV7xt4Rw" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_qLvfoARGEe2F--lV7xt4Rw" type="3009" element="_qKY0wARGEe2F--lV7xt4Rw">
-              <children xmi:type="notation:Node" xmi:id="_qLvfowRGEe2F--lV7xt4Rw" type="5004"/>
-              <children xmi:type="notation:Node" xmi:id="_qLvfpARGEe2F--lV7xt4Rw" type="7003">
-                <children xmi:type="notation:Node" xmi:id="_sIybIARGEe2F--lV7xt4Rw" type="3010" element="_sH0KwgRGEe2F--lV7xt4Rw">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_sIybIQRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_sIybIgRGEe2F--lV7xt4Rw"/>
+        <children xmi:type="notation:Node" xmi:id="_Bt_PsARMEe2Fe7asWjw9lQ" type="2002" element="_Blv5sARMEe2Fe7asWjw9lQ">
+          <children xmi:type="notation:Node" xmi:id="_BuBE4ARMEe2Fe7asWjw9lQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_BuBE4QRMEe2Fe7asWjw9lQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_BuBr8ARMEe2Fe7asWjw9lQ" type="3008" element="_BqfPxgRMEe2Fe7asWjw9lQ">
+              <children xmi:type="notation:Node" xmi:id="_BuC6EARMEe2Fe7asWjw9lQ" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_BuC6EQRMEe2Fe7asWjw9lQ" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_E8vDoARMEe2Fe7asWjw9lQ" type="3009" element="_E2yzsARMEe2Fe7asWjw9lQ">
+                  <children xmi:type="notation:Node" xmi:id="_E8vqsARMEe2Fe7asWjw9lQ" type="5004"/>
+                  <children xmi:type="notation:Node" xmi:id="_E8vqsQRMEe2Fe7asWjw9lQ" type="7003">
+                    <children xmi:type="notation:Node" xmi:id="_S1HIsARMEe2Fe7asWjw9lQ" type="3010" element="_S034KARMEe2Fe7asWjw9lQ">
+                      <styles xmi:type="notation:FontStyle" xmi:id="_S1HIsQRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_S1HIsgRMEe2Fe7asWjw9lQ"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_E8vqsgRMEe2Fe7asWjw9lQ"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_E8vqswRMEe2Fe7asWjw9lQ"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_E8vDoQRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E8vDogRMEe2Fe7asWjw9lQ" x="29" y="19"/>
                 </children>
-                <styles xmi:type="notation:SortingStyle" xmi:id="_qLvfpQRGEe2F--lV7xt4Rw"/>
-                <styles xmi:type="notation:FilteringStyle" xmi:id="_qLvfpgRGEe2F--lV7xt4Rw"/>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_BuC6EgRMEe2Fe7asWjw9lQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_BuC6EwRMEe2Fe7asWjw9lQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_BuC6FARMEe2Fe7asWjw9lQ"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_qLvfoQRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qLvfogRGEe2F--lV7xt4Rw" x="25" y="50"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_BuBr8QRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuBr8gRMEe2Fe7asWjw9lQ"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_nBtzogRGEe2F--lV7xt4Rw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_nBtzowRGEe2F--lV7xt4Rw"/>
+            <children xmi:type="notation:Node" xmi:id="_BuDhIARMEe2Fe7asWjw9lQ" type="3008" element="_BqfPyQRMEe2Fe7asWjw9lQ">
+              <children xmi:type="notation:Node" xmi:id="_BuDhIwRMEe2Fe7asWjw9lQ" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_BuDhJARMEe2Fe7asWjw9lQ" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_BuDhJQRMEe2Fe7asWjw9lQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_BuDhJgRMEe2Fe7asWjw9lQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_BuDhJwRMEe2Fe7asWjw9lQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_BuDhIQRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuDhIgRMEe2Fe7asWjw9lQ" y="40"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_BuBE4gRMEe2Fe7asWjw9lQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_BuBE4wRMEe2Fe7asWjw9lQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_nBtMkQRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nBtMkgRGEe2F--lV7xt4Rw" x="270" y="99"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Bt_PsQRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bt_PsgRMEe2Fe7asWjw9lQ" x="215" y="120"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_GLLbcQRGEe2F--lV7xt4Rw"/>
-        <edges xmi:type="notation:Edge" xmi:id="_sq1YQARGEe2F--lV7xt4Rw" type="4001" element="_lIbWxgRGEe2F--lV7xt4Rw" source="_lIck4ARGEe2F--lV7xt4Rw" target="_nBtMkARGEe2F--lV7xt4Rw">
-          <children xmi:type="notation:Node" xmi:id="_sq1YRARGEe2F--lV7xt4Rw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sq1YRQRGEe2F--lV7xt4Rw" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_JEzFMARMEe2Fe7asWjw9lQ" type="4001" element="_JAjeYARMEe2Fe7asWjw9lQ" source="_lIck4ARGEe2F--lV7xt4Rw" target="_Bt_PsARMEe2Fe7asWjw9lQ">
+          <children xmi:type="notation:Node" xmi:id="_JEzsQARMEe2Fe7asWjw9lQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JEzsQQRMEe2Fe7asWjw9lQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_sq1YRgRGEe2F--lV7xt4Rw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sq1YRwRGEe2F--lV7xt4Rw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_JEzsQgRMEe2Fe7asWjw9lQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JEzsQwRMEe2Fe7asWjw9lQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_sq1YSARGEe2F--lV7xt4Rw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sq1_UARGEe2F--lV7xt4Rw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_JEzsRARMEe2Fe7asWjw9lQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JEzsRQRMEe2Fe7asWjw9lQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sq1YQQRGEe2F--lV7xt4Rw"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_sq1YQgRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sq1YQwRGEe2F--lV7xt4Rw" points="[0, -1, -276, -78]$[250, 69, -26, -8]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sq1_UQRGEe2F--lV7xt4Rw" id="(0.5,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sq1_UgRGEe2F--lV7xt4Rw" id="(0.13756613756613756,0.07547169811320754)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_JEzFMQRMEe2Fe7asWjw9lQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_JEzFMgRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JEzFMwRMEe2Fe7asWjw9lQ" points="[0, 0, -65, -80]$[65, 80, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JE0TUARMEe2Fe7asWjw9lQ" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JE0TUQRMEe2Fe7asWjw9lQ" id="(0.3806228373702422,0.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_tIDfwARGEe2F--lV7xt4Rw" type="4001" element="_tHp3JARGEe2F--lV7xt4Rw" source="_nBtMkARGEe2F--lV7xt4Rw" target="_lIdL8ARGEe2F--lV7xt4Rw">
-          <children xmi:type="notation:Node" xmi:id="_tIDfxARGEe2F--lV7xt4Rw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tIDfxQRGEe2F--lV7xt4Rw" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_OUWTQARMEe2Fe7asWjw9lQ" type="4001" element="_OSPadARMEe2Fe7asWjw9lQ" source="_Bt_PsARMEe2Fe7asWjw9lQ" target="_lIdL8ARGEe2F--lV7xt4Rw">
+          <children xmi:type="notation:Node" xmi:id="_OUWTRARMEe2Fe7asWjw9lQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OUWTRQRMEe2Fe7asWjw9lQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_tIDfxgRGEe2F--lV7xt4Rw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tIDfxwRGEe2F--lV7xt4Rw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_OUWTRgRMEe2Fe7asWjw9lQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OUWTRwRMEe2Fe7asWjw9lQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_tIDfyARGEe2F--lV7xt4Rw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tIDfyQRGEe2F--lV7xt4Rw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_OUWTSARMEe2Fe7asWjw9lQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OUWTSQRMEe2Fe7asWjw9lQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_tIDfwQRGEe2F--lV7xt4Rw"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_tIDfwgRGEe2F--lV7xt4Rw" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tIDfwwRGEe2F--lV7xt4Rw" points="[0, 0, 230, 70]$[-230, -70, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tIDfygRGEe2F--lV7xt4Rw" id="(0.0,0.4339622641509434)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tIDfywRGEe2F--lV7xt4Rw" id="(1.0,0.375)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_OUWTQQRMEe2Fe7asWjw9lQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_OUWTQgRMEe2Fe7asWjw9lQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OUWTQwRMEe2Fe7asWjw9lQ" points="[0, 0, 55, -73]$[-55, 73, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OUWTSgRMEe2Fe7asWjw9lQ" id="(0.4671280276816609,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OUWTSwRMEe2Fe7asWjw9lQ" id="(0.375,0.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_GLMCgARGEe2F--lV7xt4Rw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_GLMCgQRGEe2F--lV7xt4Rw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lIbWwARGEe2F--lV7xt4Rw" outgoingEdges="_lIbWxgRGEe2F--lV7xt4Rw" width="3" height="3">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lIbWwARGEe2F--lV7xt4Rw" outgoingEdges="_JAjeYARMEe2Fe7asWjw9lQ" width="3" height="3">
       <target xmi:type="seff:StartAction" href="default.repository#_GLNQoARGEe2F--lV7xt4Rw"/>
       <semanticElements xmi:type="seff:StartAction" href="default.repository#_GLNQoARGEe2F--lV7xt4Rw"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lIbWwQRGEe2F--lV7xt4Rw" showIcon="false" labelPosition="node" workspacePath="/org.palladiosimulator.editors.sirius.seff/icons/start.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@nodeMappings[name='StartNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@nodeMappings[name='StartNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lIbWwwRGEe2F--lV7xt4Rw" incomingEdges="_tHp3JARGEe2F--lV7xt4Rw" width="4" height="4">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_lIbWwwRGEe2F--lV7xt4Rw" incomingEdges="_OSPadARMEe2Fe7asWjw9lQ" width="4" height="4">
       <target xmi:type="seff:StopAction" href="default.repository#_GLNQoQRGEe2F--lV7xt4Rw"/>
       <semanticElements xmi:type="seff:StopAction" href="default.repository#_GLNQoQRGEe2F--lV7xt4Rw"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lIbWxARGEe2F--lV7xt4Rw" showIcon="false" labelPosition="node" workspacePath="/org.palladiosimulator.editors.sirius.seff/icons/end.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@nodeMappings[name='StopNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@nodeMappings[name='StopNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_lIbWxgRGEe2F--lV7xt4Rw" sourceNode="_lIbWwARGEe2F--lV7xt4Rw" targetNode="_nAo1kARGEe2F--lV7xt4Rw">
-      <target xmi:type="seff:StartAction" href="default.repository#_GLNQoARGEe2F--lV7xt4Rw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_lIbWxwRGEe2F--lV7xt4Rw" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_lIbWyARGEe2F--lV7xt4Rw"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_nAo1kARGEe2F--lV7xt4Rw" name="&lt;&lt;SetVariableAction>>&#xA;StoreDeliveryAddress" outgoingEdges="_tHp3JARGEe2F--lV7xt4Rw" incomingEdges="_lIbWxgRGEe2F--lV7xt4Rw">
-      <target xmi:type="seff:SetVariableAction" href="default.repository#_nAoOgARGEe2F--lV7xt4Rw"/>
-      <semanticElements xmi:type="seff:SetVariableAction" href="default.repository#_nAoOgARGEe2F--lV7xt4Rw"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Blv5sARMEe2Fe7asWjw9lQ" name="&lt;&lt;ExternalCallAction>>&#xA;ExternalCallAction1&#xA;OnlineShop.DatabaseInterface.storeDeliveryAddress" outgoingEdges="_OSPadARMEe2Fe7asWjw9lQ" incomingEdges="_JAjeYARMEe2Fe7asWjw9lQ" childrenPresentation="VerticalStack">
+      <target xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+      <semanticElements xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_nBULAARGEe2F--lV7xt4Rw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='SetVariableAction']/@style"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_BlwgwARMEe2Fe7asWjw9lQ" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='SetVariableAction']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qKY0wARGEe2F--lV7xt4Rw" name="userData">
-        <target xmi:type="parameter:VariableUsage" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@localVariableUsages_SetVariableAction.0"/>
-        <semanticElements xmi:type="parameter:VariableUsage" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@localVariableUsages_SetVariableAction.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qKY0wQRGEe2F--lV7xt4Rw" borderSize="1" borderSizeComputationExpression="1" backgroundColor="136,136,136" foregroundColor="136,136,136">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='SetVariableAction']/@subContainerMappings[name='LocalVariableUsageSetVariableAction']/@style"/>
+      <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_BqfPxgRMEe2Fe7asWjw9lQ" name="InputVariableUsageCompartment">
+        <target xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+        <semanticElements xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_BqfPxwRMEe2Fe7asWjw9lQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='SetVariableAction']/@subContainerMappings[name='LocalVariableUsageSetVariableAction']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sH0KwgRGEe2F--lV7xt4Rw" name="userData.*.* := userData.*.*">
-          <target xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@localVariableUsages_SetVariableAction.0/@variableCharacterisation_VariableUsage.0"/>
-          <semanticElements xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@localVariableUsages_SetVariableAction.0/@variableCharacterisation_VariableUsage.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_sH31IARGEe2F--lV7xt4Rw" showIcon="false" labelPosition="node" color="209,209,209">
-            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='SetVariableAction']/@subContainerMappings[name='LocalVariableUsageSetVariableAction']/@subNodeMappings[name='ConfidentialityVariableCharacterisationOutputSetter']/@style"/>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_E2yzsARMEe2Fe7asWjw9lQ" name="userData">
+          <target xmi:type="parameter:VariableUsage" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@inputVariableUsages__CallAction.0"/>
+          <semanticElements xmi:type="parameter:VariableUsage" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@inputVariableUsages__CallAction.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_E2yzsQRMEe2Fe7asWjw9lQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="136,136,136" foregroundColor="136,136,136">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='SetVariableAction']/@subContainerMappings[name='LocalVariableUsageSetVariableAction']/@subNodeMappings[name='ConfidentialityVariableCharacterisationOutputSetter']"/>
-        </ownedElements>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']"/>
+          <ownedElements xmi:type="diagram:DNodeListElement" uid="_S034KARMEe2Fe7asWjw9lQ" name="userData.*.* := userData.*.*">
+            <target xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
+            <semanticElements xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="default.repository#//@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
+            <ownedStyle xmi:type="diagram:Square" uid="_S08JkARMEe2Fe7asWjw9lQ" showIcon="false" labelPosition="node" color="209,209,209">
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']"/>
+          </ownedElements>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_BqfPyQRMEe2Fe7asWjw9lQ" name="OutputVariableUsageCompartment">
+        <target xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+        <semanticElements xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_BqfPygRMEe2Fe7asWjw9lQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='OutputVariableUsageCompartment']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='OutputVariableUsageCompartment']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_tHp3JARGEe2F--lV7xt4Rw" sourceNode="_nAo1kARGEe2F--lV7xt4Rw" targetNode="_lIbWwwRGEe2F--lV7xt4Rw">
-      <target xmi:type="seff:SetVariableAction" href="default.repository#_nAoOgARGEe2F--lV7xt4Rw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_tHqeMARGEe2F--lV7xt4Rw" size="2">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_JAjeYARMEe2Fe7asWjw9lQ" sourceNode="_lIbWwARGEe2F--lV7xt4Rw" targetNode="_Blv5sARMEe2Fe7asWjw9lQ">
+      <target xmi:type="seff:StartAction" href="default.repository#_GLNQoARGEe2F--lV7xt4Rw"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_JAjeYQRMEe2Fe7asWjw9lQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_tHqeMQRGEe2F--lV7xt4Rw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JAjeYgRMEe2Fe7asWjw9lQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_OSPadARMEe2Fe7asWjw9lQ" sourceNode="_Blv5sARMEe2Fe7asWjw9lQ" targetNode="_lIbWwwRGEe2F--lV7xt4Rw">
+      <target xmi:type="seff:ExternalCallAction" href="default.repository#_BOaXwARMEe2Fe7asWjw9lQ"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OSPadQRMEe2Fe7asWjw9lQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_OSPadgRMEe2Fe7asWjw9lQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']"/>
     </ownedDiagramElements>

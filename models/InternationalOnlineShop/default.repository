@@ -4,19 +4,19 @@
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_nGZewITjEeywmO_IpTxeAg" entityName="OnlineShop.UserInterface" providedInterface__OperationProvidedRole="_UhSk0ITjEeywmO_IpTxeAg"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ozX98ITjEeywmO_IpTxeAg" entityName="OnlineShop.DatabaseInterface" requiredInterface__OperationRequiredRole="_XGAZwITiEeywmO_IpTxeAg"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_F4bekARGEe2F--lV7xt4Rw" describedService__SEFF="_Aej24ARGEe2F--lV7xt4Rw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_GLNQoARGEe2F--lV7xt4Rw" successor_AbstractAction="_nAoOgARGEe2F--lV7xt4Rw"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_GLNQoQRGEe2F--lV7xt4Rw" predecessor_AbstractAction="_nAoOgARGEe2F--lV7xt4Rw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_nAoOgARGEe2F--lV7xt4Rw" entityName="StoreDeliveryAddress" predecessor_AbstractAction="_GLNQoARGEe2F--lV7xt4Rw" successor_AbstractAction="_GLNQoQRGEe2F--lV7xt4Rw">
-        <localVariableUsages_SetVariableAction>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_GLNQoARGEe2F--lV7xt4Rw" successor_AbstractAction="_BOaXwARMEe2Fe7asWjw9lQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_GLNQoQRGEe2F--lV7xt4Rw" predecessor_AbstractAction="_BOaXwARMEe2Fe7asWjw9lQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_BOaXwARMEe2Fe7asWjw9lQ" entityName="ExternalCallAction1" predecessor_AbstractAction="_GLNQoARGEe2F--lV7xt4Rw" successor_AbstractAction="_GLNQoQRGEe2F--lV7xt4Rw" calledService_ExternalService="_KefDsARGEe2F--lV7xt4Rw" role_ExternalService="_ozX98ITjEeywmO_IpTxeAg">
+        <inputVariableUsages__CallAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>
-            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_sG3vkARGEe2F--lV7xt4Rw"/>
-            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_sG3vkQRGEe2F--lV7xt4Rw">
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_Sz5AvgRMEe2Fe7asWjw9lQ"/>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_Sz5AvwRMEe2Fe7asWjw9lQ">
               <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
             </rhs>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
-        </localVariableUsages_SetVariableAction>
+        </inputVariableUsages__CallAction>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
