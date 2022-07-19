@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler">
+    <varyingSubjects xsi:type="composition:AssemblyContext" href="source/default.system#_5qOmUITjEeywmO_IpTxeAg"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_upfkIITgEeywmO_IpTxeAg"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
+</UncertaintyVariationModel:UncertaintyVariations>
