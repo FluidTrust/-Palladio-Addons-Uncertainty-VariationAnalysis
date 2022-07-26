@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://palladiosimulator.org/dataflow/dictionary/characterized/1.0" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:expressions="http://palladiosimulator.org/dataflow/dictionary/characterized/expressions/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
   <components__Repository xsi:type="repository:BasicComponent" id="_S65rQITiEeywmO_IpTxeAg" entityName="OnlineShop">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_nGZewITjEeywmO_IpTxeAg" entityName="OnlineShop.UserInterface" providedInterface__OperationProvidedRole="_UhSk0ITjEeywmO_IpTxeAg"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ozX98ITjEeywmO_IpTxeAg" entityName="OnlineShop.DatabaseInterface" requiredInterface__OperationRequiredRole="_XGAZwITiEeywmO_IpTxeAg"/>
@@ -10,10 +10,18 @@
         <inputVariableUsages__CallAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>
-            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_Sz5AvgRMEe2Fe7asWjw9lQ"/>
-            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_Sz5AvwRMEe2Fe7asWjw9lQ">
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_Odv0cAzfEe2ZKoms4BRrGA"/>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_Odv0cQzfEe2ZKoms4BRrGA">
               <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
             </rhs>
+          </variableCharacterisation_VariableUsage>
+          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+            <specification_VariableCharacterisation specification="false"/>
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_OdwbgAzfEe2ZKoms4BRrGA">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+              <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@0"/>
+            </lhs>
+            <rhs xsi:type="expressions:True" id="_OdwbgQzfEe2ZKoms4BRrGA"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
         </inputVariableUsages__CallAction>
@@ -29,10 +37,18 @@
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>
-            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_jHxGkARGEe2F--lV7xt4Rw"/>
-            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_jHxGkQRGEe2F--lV7xt4Rw">
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_hZwygAzfEe2ZKoms4BRrGA"/>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_hZwygQzfEe2ZKoms4BRrGA">
               <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
             </rhs>
+          </variableCharacterisation_VariableUsage>
+          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+            <specification_VariableCharacterisation specification="false"/>
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_hZwyggzfEe2ZKoms4BRrGA">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+              <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@0"/>
+            </lhs>
+            <rhs xsi:type="expressions:True" id="_hZwygwzfEe2ZKoms4BRrGA"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
         </localVariableUsages_SetVariableAction>
