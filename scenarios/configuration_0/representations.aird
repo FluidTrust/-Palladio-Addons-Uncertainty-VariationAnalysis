@@ -20,7 +20,7 @@
     <semanticResources>platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.model.profile/profile.emfprofile_diagram</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FCoWwCF-EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.allocation/description/allocation.odesign#//@ownedViewpoints[name='Allocation']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FDq4kyF-EeqYabGLKRlfzA" name="Allocation Diagram" repPath="#_FCoWwSF-EeqYabGLKRlfzA" changeId="794c5335-3aa6-4619-8bbf-9b62dd07afbc">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FDq4kyF-EeqYabGLKRlfzA" name="Allocation Diagram" repPath="#_FCoWwSF-EeqYabGLKRlfzA" changeId="3c4cee29-411d-4fbe-855c-ef367300081f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.allocation/description/allocation.odesign#//@ownedViewpoints[name='Allocation']/@ownedRepresentations[name='Allocation%20Diagram']"/>
         <target xmi:type="allocation:Allocation" href="default.allocation#_JiPBICHdEd6lJo4DCALHMw"/>
       </ownedRepresentationDescriptors>
@@ -133,7 +133,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_7uoY9oThEeywmO_IpTxeAg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_7uoY8YThEeywmO_IpTxeAg" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7uoY8oThEeywmO_IpTxeAg" x="610" y="91" height="131"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7uoY8oThEeywmO_IpTxeAg" x="450" y="91" height="131"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_FDq4liF-EeqYabGLKRlfzA"/>
       </data>

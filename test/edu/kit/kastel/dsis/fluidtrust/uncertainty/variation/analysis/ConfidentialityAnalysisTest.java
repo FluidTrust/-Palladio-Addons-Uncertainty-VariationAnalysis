@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
-import edu.kit.kastel.dsis.fluidtrust.dataflow.analysis.DataflowAnalysisWorkflow;
-import edu.kit.kastel.dsis.fluidtrust.dataflow.analysis.RunOnlineShopAnalysisJob;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.DataflowAnalysisWorkflow;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.RunOnlineShopAnalysisJob;
 
 public class ConfidentialityAnalysisTest extends TestBase {
 	@Override
@@ -29,8 +29,9 @@ public class ConfidentialityAnalysisTest extends TestBase {
 		System.out.println("\n------------------------------------------------------------------------------------");
 		System.out.println("Running Online Shop Analysis:\n");
 		
-		final var allocationURI = TestInitializer.getModelURI("models/InternationalOnlineShop/default.allocation");
-		final var usageURI = TestInitializer.getModelURI("models/InternationalOnlineShop/default.usagemodel");
+		final var allocationURI = TestInitializer.getModelURI("models/source/default.allocation");
+		final var usageURI = TestInitializer.getModelURI("models/source/default.usagemodel");
+		RunOnlineShopAnalysisJob onlineShopAnalysis = new RunOnlineShopAnalysisJob();
 		final var workflow = new DataflowAnalysisWorkflow(allocationURI, usageURI, new RunOnlineShopAnalysisJob());
 		workflow.execute(new NullProgressMonitor());
 	}
