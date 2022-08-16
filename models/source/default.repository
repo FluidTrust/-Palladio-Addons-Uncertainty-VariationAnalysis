@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://palladiosimulator.org/dataflow/dictionary/characterized/1.0" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:expressions="http://palladiosimulator.org/dataflow/dictionary/characterized/expressions/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
   <components__Repository xsi:type="repository:BasicComponent" id="_S65rQITiEeywmO_IpTxeAg" entityName="OnlineShop">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_nGZewITjEeywmO_IpTxeAg" entityName="OnlineShop.UserInterface" providedInterface__OperationProvidedRole="_UhSk0ITjEeywmO_IpTxeAg"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ozX98ITjEeywmO_IpTxeAg" entityName="OnlineShop.DatabaseInterface" requiredInterface__OperationRequiredRole="_XGAZwITiEeywmO_IpTxeAg"/>
@@ -10,10 +10,18 @@
         <inputVariableUsages__CallAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>
-            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_Sz5AvgRMEe2Fe7asWjw9lQ"/>
-            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_Sz5AvwRMEe2Fe7asWjw9lQ">
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_6wp0cB1VEe2cqI1_EPPbkA"/>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_6wp0cR1VEe2cqI1_EPPbkA">
               <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
             </rhs>
+          </variableCharacterisation_VariableUsage>
+          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+            <specification_VariableCharacterisation specification="false"/>
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_6wp0ch1VEe2cqI1_EPPbkA">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+              <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@0"/>
+            </lhs>
+            <rhs xsi:type="expressions:False" id="_6wp0cx1VEe2cqI1_EPPbkA"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
         </inputVariableUsages__CallAction>
@@ -21,21 +29,81 @@
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_I9a5AITjEeywmO_IpTxeAg" entityName="DatabaseServiceA">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_oGOkEITjEeywmO_IpTxeAg" entityName="DatabaseService.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_oGOkEITjEeywmO_IpTxeAg" entityName="DatabaseServiceA.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_NkUzQARGEe2F--lV7xt4Rw" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_agZBEARGEe2F--lV7xt4Rw"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_N5JzwARGEe2F--lV7xt4Rw" predecessor_AbstractAction="_agZBEARGEe2F--lV7xt4Rw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_agZBEARGEe2F--lV7xt4Rw" entityName="StoreDeliveryAddress" predecessor_AbstractAction="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_N5JzwARGEe2F--lV7xt4Rw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
-            <specification_VariableCharacterisation specification="false"/>
-            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_jHxGkARGEe2F--lV7xt4Rw"/>
-            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_jHxGkQRGEe2F--lV7xt4Rw">
-              <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
-            </rhs>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
-        </localVariableUsages_SetVariableAction>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_N5JMsARGEe2F--lV7xt4Rw" entityName="DatabaseServiceA START" successor_AbstractAction="_-7v74B1VEe2cqI1_EPPbkA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_N5JzwARGEe2F--lV7xt4Rw" entityName="DatabaseServiceA END" predecessor_AbstractAction="_-7v74B1VEe2cqI1_EPPbkA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_-7v74B1VEe2cqI1_EPPbkA" entityName="BranchUserDataEncryption" predecessor_AbstractAction="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_N5JzwARGEe2F--lV7xt4Rw">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="__n4CEB1VEe2cqI1_EPPbkA" entityName="GuardedBranchTransition1">
+          <branchBehaviour_BranchTransition id="__n5QMB1VEe2cqI1_EPPbkA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="__n5QMR1VEe2cqI1_EPPbkA" successor_AbstractAction="_agZBEARGEe2F--lV7xt4Rw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="__n5QMh1VEe2cqI1_EPPbkA" predecessor_AbstractAction="_agZBEARGEe2F--lV7xt4Rw"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_agZBEARGEe2F--lV7xt4Rw" entityName="StoreDeliveryAddressEncrypted" predecessor_AbstractAction="__n5QMR1VEe2cqI1_EPPbkA" successor_AbstractAction="__n5QMh1VEe2cqI1_EPPbkA">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_bvsBUB1WEe2cqI1_EPPbkA"/>
+                  <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_bvsBUR1WEe2cqI1_EPPbkA">
+                    <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
+                  </rhs>
+                </variableCharacterisation_VariableUsage>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_bvsBUh1WEe2cqI1_EPPbkA">
+                    <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+                    <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@0"/>
+                  </lhs>
+                  <rhs xsi:type="expressions:True" id="_bvsBUx1WEe2cqI1_EPPbkA"/>
+                </variableCharacterisation_VariableUsage>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_bvsBVB1WEe2cqI1_EPPbkA">
+                    <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+                    <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@1"/>
+                  </lhs>
+                  <rhs xsi:type="expressions:False" id="_bvsBVR1WEe2cqI1_EPPbkA"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="true"/>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_KMDLcB1WEe2cqI1_EPPbkA" entityName="GuardedBranchTransition2">
+          <branchBehaviour_BranchTransition id="_KMDLcR1WEe2cqI1_EPPbkA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_KMDLch1WEe2cqI1_EPPbkA" successor_AbstractAction="_L6ZjoB1WEe2cqI1_EPPbkA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_KMDLcx1WEe2cqI1_EPPbkA" predecessor_AbstractAction="_L6ZjoB1WEe2cqI1_EPPbkA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_L6ZjoB1WEe2cqI1_EPPbkA" entityName="StoreDeliveryAddressUnencrypted" predecessor_AbstractAction="_KMDLch1WEe2cqI1_EPPbkA" successor_AbstractAction="_KMDLcx1WEe2cqI1_EPPbkA">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_ZwBPoB1WEe2cqI1_EPPbkA"/>
+                  <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_ZwBPoR1WEe2cqI1_EPPbkA">
+                    <namedReference xsi:type="stoex:VariableReference" referenceName="userData"/>
+                  </rhs>
+                </variableCharacterisation_VariableUsage>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_ZwBPoh1WEe2cqI1_EPPbkA">
+                    <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+                    <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@0"/>
+                  </lhs>
+                  <rhs xsi:type="expressions:False" id="_ZwBPox1WEe2cqI1_EPPbkA"/>
+                </variableCharacterisation_VariableUsage>
+                <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                  <specification_VariableCharacterisation specification="false"/>
+                  <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_ZwBPpB1WEe2cqI1_EPPbkA">
+                    <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@2"/>
+                    <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@2.literals@1"/>
+                  </lhs>
+                  <rhs xsi:type="expressions:True" id="_ZwBPpR1WEe2cqI1_EPPbkA"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="true"/>
+        </branches_Branch>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>

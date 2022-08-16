@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
-  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler">
+<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="BranchUserDataEncryption">
+    <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_-7v74B1VEe2cqI1_EPPbkA"/>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler" entityName="DeploymentLocationDBA">
     <varyingSubjects xsi:type="allocation:AllocationContext" href="source/default.allocation#_XrD8sITkEeywmO_IpTxeAg"/>
     <variationDescription>
       <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
@@ -10,5 +13,8 @@
         <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_upfkIITgEeywmO_IpTxeAg"/>
       </targetVariations>
     </variationDescription>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="BranchDataSensivity">
+    <varyingSubjects xsi:type="usagemodel:Branch" href="source/default.usagemodel#_oL2yYA9FEe24U_FyjWYc1w"/>
   </variationPoints>
 </UncertaintyVariationModel:UncertaintyVariations>

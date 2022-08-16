@@ -11,6 +11,5 @@
   </allocationContexts_Allocation>
   <allocationContexts_Allocation id="_ourAgARNEe2Fe7asWjw9lQ" entityName="Allocation_Assembly_DatabaseServiceB">
     <resourceContainer_AllocationContext href="My.resourceenvironment#_upfkIITgEeywmO_IpTxeAg"/>
-    <assemblyContext_AllocationContext href="default.system#_gbXGgARNEe2Fe7asWjw9lQ"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>
