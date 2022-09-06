@@ -27,6 +27,7 @@ import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQuer
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.DataflowAnalysisJob;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.RunOnlineShopAnalysisJob;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NaiveResultInterpretation;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NextResultInterpretation;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializationException;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializerBuilder;
 import tools.mdsd.library.standalone.initialization.emfprofiles.EMFProfileInitializationTask;
@@ -54,7 +55,7 @@ public class UncertaintyAnalysisWorkflow {
 			jobSequence.add(dataflowJob);
 		}
 		
-		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new NaiveResultInterpretation());
+		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new NextResultInterpretation());
 		
 		jobSequence.add(job);
 		

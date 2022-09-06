@@ -22,6 +22,7 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 
 		var ctServerLocation = findByName(enumCharacteristicTypes, "ServerLocation");
 		var ctDataSensitivity = findByName(enumCharacteristicTypes, "DataSensitivity");
+		var ctDataEncryption = findByName(enumCharacteristicTypes, "DataEncryption");
 
 		var violations = new ActionBasedQueryResult();
 
@@ -39,6 +40,11 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 						.flatMap(Collection::stream).filter(cv -> cv.getCharacteristicType() == ctDataSensitivity)
 						.map(CharacteristicValue::getCharacteristicLiteral).map(it -> it.getName())
 						.collect(Collectors.toList());
+				
+				var dataEncryptions = queryResult.getDataCharacteristics().values().stream()
+						.flatMap(Collection::stream).filter(cv -> cv.getCharacteristicType() == ctDataEncryption)
+						.map(CharacteristicValue::getCharacteristicLiteral).map(it -> it.getName())
+						.collect(Collectors.toList());
 
 				var element = getElementRepresentation(queryResult.getElement());
 
@@ -47,6 +53,10 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				// Actual constraint
 				if (serverLocations.contains("nonEU") && dataSensitivites.contains("Personal")) {
 					violations.addResult(resultEntry.getKey(), queryResult);
+				}
+				
+				if (dataEncryptions.contains("Encrypted")) {
+					int asdsad = 1;
 				}
 			}
 		}

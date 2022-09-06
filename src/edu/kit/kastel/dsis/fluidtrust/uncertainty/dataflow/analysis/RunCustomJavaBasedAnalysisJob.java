@@ -1,7 +1,5 @@
 package edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -15,10 +13,8 @@ import org.palladiosimulator.dataflow.confidentiality.transformation.workflow.bl
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.EnumCharacteristicType;
 import org.palladiosimulator.pcm.allocation.Allocation;
 import org.palladiosimulator.pcm.core.entity.Entity;
-import org.palladiosimulator.pcm.seff.SetVariableAction;
 import org.palladiosimulator.pcm.usagemodel.UsageModel;
 
-import de.uka.ipd.sdq.workflow.jobs.AbstractBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -74,8 +70,10 @@ public abstract class RunCustomJavaBasedAnalysisJob extends SequentialBlackboard
 		monitor.worked(1);
 
 		var detectedViolations = findViolations(dataDictionaries, allCharacteristics);
-		ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(violationResultKey).get();
-		occuredViolations.add(detectedViolations);
+		if (!detectedViolations.getResults().isEmpty()) {
+			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(violationResultKey).get();
+			occuredViolations.add(detectedViolations);
+		}
 		monitor.worked(1);
 		monitor.done();
 	}
