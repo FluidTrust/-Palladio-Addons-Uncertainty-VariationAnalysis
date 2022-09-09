@@ -37,11 +37,16 @@ public class NextResultInterpretation implements ResultInterpretation {
 					var element2 = element.getElement();
 					var elementName = "";
 					if (element2 instanceof EntryLevelSystemCallImpl) {
+						var entryLevelId = ((EntryLevelSystemCallImpl) element2).getId();
 						elementName = ((EntryLevelSystemCallImpl) element2).getEntityName();
 					} else if (element2 instanceof ExternalCallActionImpl) {
+						var externalId = ((ExternalCallActionImpl) element2).getId();
 						elementName = ((ExternalCallActionImpl) element2).getEntityName();
 					} else if (element2 instanceof SetVariableActionImpl) {
+						var variableId = ((SetVariableActionImpl) element2).getId();
 						elementName = ((SetVariableActionImpl) element2).getEntityName();
+					} else {
+						throw new Error();
 					}
 					
 					var test2 = element2.eContainer().eContainer();
@@ -54,15 +59,17 @@ public class NextResultInterpretation implements ResultInterpretation {
 					} else if (test2 instanceof GuardedBranchTransitionImpl) {
 						test2Name = ((GuardedBranchTransitionImpl) test2).getEntityName();
 					} else {
-						int n = 1;
+						throw new Error();
 					}
 					
 					if (i != 0) {
 						elementString += " -> " + elementName;
 						test2String += " -> " + test2Name;
+						i++;
 					} else {
 						elementString += elementName;
 						test2String += test2Name;
+						i++;
 					}
 					
 					for (var context : element.getContext()) {
@@ -103,7 +110,7 @@ public class NextResultInterpretation implements ResultInterpretation {
 				}
 				
 				System.out.println("VIOLATION: " + typeName + " - " + violationLiteralName);
-				System.out.println("SHOULD BE: " + literalNames.toString() + "\n");
+				System.out.println("COULD INSTEAD BE: " + literalNames.toString() + "\n");
 				System.out.println("CALL SEQUENCE");
 				System.out.println(elementString + "\n");
 				System.out.println("???");
@@ -113,6 +120,7 @@ public class NextResultInterpretation implements ResultInterpretation {
 				System.out.println("\n\n\n");
 			}
 		}
+		
 		return null;
 	}
 
