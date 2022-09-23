@@ -12,6 +12,9 @@ import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequenceE
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.CallingActionSequenceElement;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.SEFFActionSequenceElementImpl;
 
+/*
+ * TODO: This class must be renamed
+ */
 public class ViolatingConstraintActionSequence implements CallingActionSequenceElement<ExternalCallAction> {
 	private ArrayList<LiteralImpl> literals;
 	private ActionSequenceElement<?> occuringElement;

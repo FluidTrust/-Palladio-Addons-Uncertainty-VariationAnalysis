@@ -8,6 +8,7 @@ import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.impl.LiteralImpl;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.seff.impl.SetVariableActionImpl;
+import org.palladiosimulator.pcm.seff.util.SeffSwitch;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult;
@@ -21,8 +22,8 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 			List<PCMDataDictionary> dataDictionaries, ActionBasedQueryResult allCharacteristics)
 			throws JobFailedException {
 		var enumCharacteristicTypes = getAllEnumCharacteristicTypes(dataDictionaries);
-		System.out.println("\n\nCHARACTERISTIC TYPES --------------------");
-		enumCharacteristicTypes.forEach(entry -> System.out.println(entry.getName()));
+		//System.out.println("\n\nCHARACTERISTIC TYPES --------------------");
+		//enumCharacteristicTypes.forEach(entry -> System.out.println(entry.getName()));
 
 		var ctServerLocation = findByName(enumCharacteristicTypes, "ServerLocation");
 		var ctDataSensitivity = findByName(enumCharacteristicTypes, "DataSensitivity");
@@ -30,9 +31,10 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 
 		var violations = new ActionBasedQueryResult();
 
-		System.out.println("\n\nELEMENTS AND CHARACTERISTICS --------------------");
+		//System.out.println("\n\nELEMENTS AND CHARACTERISTICS --------------------");
 
 		for (var resultEntry : allCharacteristics.getResults().entrySet()) {
+			var x = 1;
 			for (var queryResult : resultEntry.getValue()) {
 
 				var serverLocations = queryResult.getNodeCharacteristics().stream()
@@ -65,28 +67,31 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				var element = queryResult.getElement().getElement();
 				var elementString = getElementRepresentation(queryResult.getElement());
 
-				System.out.println(
-						elementString + ", " + serverLocations.toString() + ", " + dataSensitivites.toString());
+				//System.out.println(
+				//		elementString + ", " + serverLocations.toString() + ", " + dataSensitivites.toString());
 
 				// Actual constraint
 				var violatingSequence = new ViolatingConstraintActionSequence();
+				boolean violationOccured = false;
 				if (serverLocations.contains("nonEU") && dataSensitivites.contains("Personal")) {
 					violatingSequence.addLiteral((LiteralImpl) serverLocationLiterals.get(0));
 					violatingSequence.addLiteral((LiteralImpl) dataSensivityLiterals.get(0));
 					violatingSequence.setOccuringElement(queryResult.getElement());
-					resultEntry.getKey().add(violatingSequence);
-					violations.addResult(resultEntry.getKey(), queryResult);
+					violationOccured = true;
 				} else if (element instanceof SetVariableActionImpl && dataEncryptions.contains("NonEncrypted")
 						&& !dataEncryptions.contains("Encrypted")) {
 					violatingSequence.addLiteral((LiteralImpl) dataEncryptionLiterals.get(0));
-					resultEntry.getKey().add(violatingSequence);
 					violatingSequence.setOccuringElement(queryResult.getElement());
+					violationOccured = true;
+				}
+				if (violationOccured) {
+					resultEntry.getKey().add(violatingSequence);
 					violations.addResult(resultEntry.getKey(), queryResult);
 				}
 			}
 		}
 
-		System.out.println("\n\nVIOLATIONS --------------------");
+		/*System.out.println("\n\nVIOLATIONS --------------------");
 		violations.getResults().forEach((sequence, resultDTO) -> {
 			resultDTO.forEach(it -> System.out.println(getElementRepresentation(it.getElement())));
 
@@ -107,7 +112,7 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 			finalSequence.forEach(it -> System.out.println(getElementRepresentation(it)));
 
 			System.out.println("\n\n");
-		});
+		});*/
 
 		return violations;
 	}

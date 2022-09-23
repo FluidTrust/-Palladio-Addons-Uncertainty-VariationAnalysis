@@ -48,7 +48,7 @@
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_aPOUYARNEe2Fe7asWjw9lQ" entityName="DatabaseServiceB">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_dLTD8ARNEe2Fe7asWjw9lQ" entityName="DatabaseServiceB.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_dLTD8ARNEe2Fe7asWjw9lQ" entityName="DatabaseService.DatabaseInterface" providedInterface__OperationProvidedRole="_XGAZwITiEeywmO_IpTxeAg"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_dLfRMARNEe2Fe7asWjw9lQ" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
       <steps_Behaviour xsi:type="seff:StartAction" id="_dLfRMQRNEe2Fe7asWjw9lQ" successor_AbstractAction="_toKBgCtpEe2NjrAZnTrfBw"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_dLfRMgRNEe2Fe7asWjw9lQ" predecessor_AbstractAction="_toKBgCtpEe2NjrAZnTrfBw"/>

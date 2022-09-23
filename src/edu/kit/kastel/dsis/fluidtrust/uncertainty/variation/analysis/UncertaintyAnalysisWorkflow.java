@@ -30,6 +30,7 @@ import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NaiveRes
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NewResultInterpretation;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NextResultInterpretation;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step3ResultInterpretation;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step3_1ResultInterpretation;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializationException;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializerBuilder;
 import tools.mdsd.library.standalone.initialization.emfprofiles.EMFProfileInitializationTask;
@@ -57,7 +58,7 @@ public class UncertaintyAnalysisWorkflow {
 			jobSequence.add(dataflowJob);
 		}
 		
-		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new NewResultInterpretation());
+		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new Step3ResultInterpretation());
 		
 		jobSequence.add(job);
 		
