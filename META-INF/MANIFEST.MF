@@ -32,5 +32,8 @@ Require-Bundle: edu.kit.kastel.dsis.fluidtrust.dataflow.analysis;bundle-version=
  org.palladiosimulator.commons;bundle-version="5.1.0",
  de.uka.ipd.sdq.workflow;bundle-version="5.1.0",
  de.uka.ipd.sdq.workflow.mdsd.blackboard;bundle-version="5.1.0",
- org.modelversioning.emfprofile.registry;bundle-version="5.1.0"
+ org.modelversioning.emfprofile.registry;bundle-version="5.1.0",
+ org.palladiosimulator.dataflow.confidentiality.pcm.model.profile;bundle-version="5.1.0",
+ org.slf4j.api;bundle-version="1.7.30",
+ org.eclipse.emf.common
 Export-Package: edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis
