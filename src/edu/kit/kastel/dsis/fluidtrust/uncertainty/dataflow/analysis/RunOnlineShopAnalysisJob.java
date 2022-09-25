@@ -84,7 +84,8 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 					violationOccured = true;
 				}
 				if (violationOccured) {
-					// Put the information about the violation into the resultEntry at the last index
+					// Put the information about the violation into the resultEntry at the last
+					// index
 					resultEntry.getKey().add(violatingSequence);
 					violations.addResult(resultEntry.getKey(), queryResult);
 				}

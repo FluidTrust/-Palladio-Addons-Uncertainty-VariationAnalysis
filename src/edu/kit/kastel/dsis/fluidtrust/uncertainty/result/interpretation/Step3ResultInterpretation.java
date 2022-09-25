@@ -90,7 +90,7 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 		System.out.println("\n");
 
 		System.out.println("The following uncertainties contribute to these violations:");
-		influencingUncertainties.forEach(iu -> System.out.println("Entity Name: " + iu.getEntityName()));
+		influencingUncertainties.forEach(iu -> System.out.println(" - " + iu.getEntityName()));
 
 		return null;
 	}

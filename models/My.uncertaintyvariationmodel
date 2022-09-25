@@ -20,4 +20,15 @@
   <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Database Choice">
     <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_m14okDzlEe2J7qsIELsCWg"/>
   </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler" entityName="Deployment Location Backup Service">
+    <varyingSubjects xsi:type="allocation:AllocationContext" href="source/default.allocation#_6qFt4D0cEe2J7qsIELsCWg"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_lpYxsD0QEe2J7qsIELsCWg"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
 </UncertaintyVariationModel:UncertaintyVariations>
