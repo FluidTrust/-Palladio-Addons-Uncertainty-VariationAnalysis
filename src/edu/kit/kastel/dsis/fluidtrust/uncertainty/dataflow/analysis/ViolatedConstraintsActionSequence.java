@@ -15,12 +15,13 @@ import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.SEFFActionSeque
 /*
  * TODO: This class must be renamed
  */
-public class ViolatingConstraintActionSequence implements CallingActionSequenceElement<ExternalCallAction> {
+public class ViolatedConstraintsActionSequence implements CallingActionSequenceElement<ExternalCallAction> {
 	private ArrayList<LiteralImpl> literals;
-	private ActionSequenceElement<?> occuringElement;
+	private ArrayList<ActionSequenceElement<?>> occuringElements;
 	
-	public ViolatingConstraintActionSequence() {
-		this.literals = new ArrayList<LiteralImpl>();
+	public ViolatedConstraintsActionSequence() {
+		this.literals = new ArrayList<>();
+		this.occuringElements = new ArrayList<>();
 	}
 
 	@Override
@@ -48,13 +49,13 @@ public class ViolatingConstraintActionSequence implements CallingActionSequenceE
 	public void addLiteral(LiteralImpl literal) {
 		this.literals.add(literal);
 	}
-
-	public ActionSequenceElement<?> getOccuringElement() {
-		return occuringElement;
+	
+	public ArrayList<ActionSequenceElement<?>> getOccuringElements() {
+		return this.occuringElements;
 	}
-
-	public void setOccuringElement(ActionSequenceElement<?> actionSequenceElement) {
-		this.occuringElement = actionSequenceElement;
+	
+	public void addOccuringElement(ActionSequenceElement<?> occuringElement) {
+		this.occuringElements.add(occuringElement);
 	}
 
 }

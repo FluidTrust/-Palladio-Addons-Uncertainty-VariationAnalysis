@@ -48,11 +48,11 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_GG7sYCF-EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_N5ACwARGEe2F--lV7xt4Rw" name="&lt;DatabaseServiceA>&lt;storeDeliveryAddress> SEFF Diagram" repPath="#_N4-NkARGEe2F--lV7xt4Rw" changeId="17fc61a7-70dc-4f66-8a5e-5cf6f5a6f42f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_N5ACwARGEe2F--lV7xt4Rw" name="&lt;DatabaseServiceA>&lt;storeDeliveryAddress> SEFF Diagram" repPath="#_N4-NkARGEe2F--lV7xt4Rw" changeId="49937ca0-961e-4acc-9a23-87ba38113dec">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="default.repository#_NkUzQARGEe2F--lV7xt4Rw"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_dLlX0ARNEe2Fe7asWjw9lQ" name="&lt;DatabaseServiceB>&lt;storeDeliveryAddress> SEFF Diagram" repPath="#_dLi7kARNEe2Fe7asWjw9lQ" changeId="341a93ca-c6eb-4f2a-afae-76ef9b0fd008">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_dLlX0ARNEe2Fe7asWjw9lQ" name="&lt;DatabaseServiceB>&lt;storeDeliveryAddress> SEFF Diagram" repPath="#_dLi7kARNEe2Fe7asWjw9lQ" changeId="b3a8299a-2b0b-4afe-8550-05969f73c63a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="default.repository#_dLfRMARNEe2Fe7asWjw9lQ"/>
       </ownedRepresentationDescriptors>
@@ -2166,7 +2166,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@nodeMappings[name='StopNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_gV125CtpEe2NjrAZnTrfBw" name="&lt;&lt;SetVariableAction>>&#xA;StoreDeliveryAddress" outgoingEdges="_kmqy4CtpEe2NjrAZnTrfBw" incomingEdges="_kOqikCtpEe2NjrAZnTrfBw">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_gV125CtpEe2NjrAZnTrfBw" name="&lt;&lt;SetVariableAction>>&#xA;StoreDeliveryAddressA" outgoingEdges="_kmqy4CtpEe2NjrAZnTrfBw" incomingEdges="_kOqikCtpEe2NjrAZnTrfBw">
       <target xmi:type="seff:SetVariableAction" href="default.repository#_gSRlhytpEe2NjrAZnTrfBw"/>
       <semanticElements xmi:type="seff:SetVariableAction" href="default.repository#_gSRlhytpEe2NjrAZnTrfBw"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2334,7 +2334,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@edgeMappings[name='ControlFlow']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_toKokCtpEe2NjrAZnTrfBw" name="&lt;&lt;SetVariableAction>>&#xA;StoreDeliveryAddress" outgoingEdges="_z8kl4itpEe2NjrAZnTrfBw" incomingEdges="_dL12gwRNEe2Fe7asWjw9lQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_toKokCtpEe2NjrAZnTrfBw" name="&lt;&lt;SetVariableAction>>&#xA;StoreDeliveryAddressB" outgoingEdges="_z8kl4itpEe2NjrAZnTrfBw" incomingEdges="_dL12gwRNEe2Fe7asWjw9lQ">
       <target xmi:type="seff:SetVariableAction" href="default.repository#_toKBgCtpEe2NjrAZnTrfBw"/>
       <semanticElements xmi:type="seff:SetVariableAction" href="default.repository#_toKBgCtpEe2NjrAZnTrfBw"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

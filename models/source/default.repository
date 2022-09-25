@@ -33,7 +33,7 @@
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_NkUzQARGEe2F--lV7xt4Rw" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
       <steps_Behaviour xsi:type="seff:StartAction" id="_N5JMsARGEe2F--lV7xt4Rw" entityName="DatabaseServiceA START" successor_AbstractAction="_gSRlhytpEe2NjrAZnTrfBw"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_N5JzwARGEe2F--lV7xt4Rw" entityName="DatabaseServiceA END" predecessor_AbstractAction="_gSRlhytpEe2NjrAZnTrfBw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_gSRlhytpEe2NjrAZnTrfBw" entityName="StoreDeliveryAddress" predecessor_AbstractAction="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_N5JzwARGEe2F--lV7xt4Rw">
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_gSRlhytpEe2NjrAZnTrfBw" entityName="StoreDeliveryAddressA" predecessor_AbstractAction="_N5JMsARGEe2F--lV7xt4Rw" successor_AbstractAction="_N5JzwARGEe2F--lV7xt4Rw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>
@@ -52,7 +52,7 @@
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_dLfRMARNEe2Fe7asWjw9lQ" describedService__SEFF="_KefDsARGEe2F--lV7xt4Rw">
       <steps_Behaviour xsi:type="seff:StartAction" id="_dLfRMQRNEe2Fe7asWjw9lQ" successor_AbstractAction="_toKBgCtpEe2NjrAZnTrfBw"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_dLfRMgRNEe2Fe7asWjw9lQ" predecessor_AbstractAction="_toKBgCtpEe2NjrAZnTrfBw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_toKBgCtpEe2NjrAZnTrfBw" entityName="StoreDeliveryAddress" predecessor_AbstractAction="_dLfRMQRNEe2Fe7asWjw9lQ" successor_AbstractAction="_dLfRMgRNEe2Fe7asWjw9lQ">
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_toKBgCtpEe2NjrAZnTrfBw" entityName="StoreDeliveryAddressB" predecessor_AbstractAction="_dLfRMQRNEe2Fe7asWjw9lQ" successor_AbstractAction="_dLfRMgRNEe2Fe7asWjw9lQ">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>

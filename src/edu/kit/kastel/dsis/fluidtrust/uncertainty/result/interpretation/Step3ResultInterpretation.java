@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.Literal;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.impl.LiteralImpl;
@@ -25,29 +26,22 @@ import UncertaintyVariationModel.impl.UncertaintyVariationsImpl;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.AbstractActionSequenceElement;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequence;
+import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequenceElement;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.SEFFActionSequenceElementImpl;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.ViolatingConstraintActionSequence;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.ViolatedConstraintsActionSequence;
 
 public class Step3ResultInterpretation implements ResultInterpretation {
 
 	@Override
 	public Object getInterpretation(ArrayList<ActionBasedQueryResult> violations) {
-		final URI umURI = URI.createPlatformPluginURI(
-				"/edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis/models/My.uncertaintyvariationmodel",
-				false);
-
-		ResourceAbstraction rs = new ModelResourceAbstraction();
-		VariationManager vm = new VariationManager(umURI, rs);
-
-		UncertaintyVariationsImpl uncertaintyModel = (UncertaintyVariationsImpl) vm.loadUncertaintyVariantModel();
-		var variationPoints = uncertaintyModel.getVariationPoints();
+		Step2ResultInterpretation previousInterpretation = new Step2ResultInterpretation();
+		previousInterpretation.getInterpretation(violations);		
+		
+		// Get variation Points from uncertainty model
+		var variationPoints = this.getVariationPoints();
 
 		HashSet<String> uncertaintyPointIds = new HashSet<String>();
 		HashMap<String, VariationPoint> uncertaintyPointIdsToVariationPoint = new HashMap<>();
-
-		HashSet<VariationPoint> influencingUncertainties = new HashSet<>();
-
-		HashSet<String> occuringStrings = new HashSet<>();
 
 		for (VariationPoint vp : variationPoints) {
 			var varyingSubjects = vp.getVaryingSubjects();
@@ -59,46 +53,28 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 
 		}
 
+		HashSet<VariationPoint> influencingUncertainties = new HashSet<>();
+		HashSet<String> occuringStrings = new HashSet<>();
+
+		// Collect the reason why a violation occured and get all the uncertainty points lying on the sequence
 		for (var violation : violations) {
-			var entrySet = violation.getResults().entrySet();
+			for (var result : violation.getResults().entrySet()) {
+				ActionSequence actionSequence = result.getKey();
 
-			for (var result : entrySet) {
-				ActionSequence key = result.getKey();
+				ViolatedConstraintsActionSequence violatedConstraints = this
+						.getViolatedConstraintSequenceFromActionSequence(actionSequence);
+				ArrayList<LiteralImpl> occuringLiterals = violatedConstraints.getLiterals();
+				ArrayList<ActionSequenceElement<?>> occuringSequenceElements = violatedConstraints
+						.getOccuringElements();
 
-				// TODO: MISSING INFORMATION about which uncertainty modifies which which
-				// literal or architectural decision
-				ViolatingConstraintActionSequence violatedConstraint = (ViolatingConstraintActionSequence) key
-						.get(key.size() - 1);
-				ArrayList<LiteralImpl> occuringLiterals = violatedConstraint.getLiterals();
-				AbstractActionSequenceElement occuringElement = (SEFFActionSequenceElementImpl) violatedConstraint
-						.getOccuringElement();
-				key.remove(key.size() - 1);
+				occuringStrings.add(this.createCombinedString(occuringSequenceElements, occuringLiterals));
 
-				EntityImpl element = (EntityImpl) occuringElement.getElement();
-				var name = element.getEntityName();
-				var name2 = ((BasicComponent) element.eContainer().eContainer()).getEntityName();
-
-				String literalString = "";
-
-				int i = 0;
-				for (Literal literal : occuringLiterals) {
-					if (i == 0) {
-						literalString = literal.getName();
-					} else {
-						literalString += ", " + literal.getName();
-					}
-					i++;
-				}
-
-				String combined = name + " on " + name2 + " with literals: " + literalString;
-				occuringStrings.add(combined);
-
-				var x = 1;
-
-				HashSet<String> violationIds = AnalysisUtility.getIdsFromEntrySet(key);
+				// Get all ids of the elements in the action sequence
+				HashSet<String> violationIds = AnalysisUtility.getIdsFromActionSequence(actionSequence);
 
 				for (var violationId : violationIds) {
 					for (var uncertaintyPointId : uncertaintyPointIds) {
+						// search for ids in the variation points
 						if (violationId.equals(uncertaintyPointId)) {
 							influencingUncertainties.add(uncertaintyPointIdsToVariationPoint.get(uncertaintyPointId));
 						}
@@ -113,10 +89,77 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 
 		System.out.println("\n");
 
-		System.out.println("The following uncertainties contribute to violations:");
+		System.out.println("The following uncertainties contribute to these violations:");
 		influencingUncertainties.forEach(iu -> System.out.println("Entity Name: " + iu.getEntityName()));
 
 		return null;
 	}
 
+	/*
+	 * Creates the output string that contains the element where the violation occurred and which literals were set
+	 */
+	private String createCombinedString(ArrayList<ActionSequenceElement<?>> occuringSequenceElements,
+			ArrayList<LiteralImpl> occuringLiterals) {
+		String occuringElementString = this.createOccuringElementString(occuringSequenceElements);
+		String literalString = this.createLiteralString(occuringLiterals);
+
+		return occuringElementString + " with literals: " + literalString;
+	}
+
+	/*
+	 * Loads the uncertainty model and returns the cointaining variation points
+	 */
+	private EList<VariationPoint> getVariationPoints() {
+		final URI umURI = URI.createPlatformPluginURI(
+				"/edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis/models/My.uncertaintyvariationmodel",
+				false);
+
+		ResourceAbstraction rs = new ModelResourceAbstraction();
+		VariationManager vm = new VariationManager(umURI, rs);
+
+		UncertaintyVariationsImpl uncertaintyModel = (UncertaintyVariationsImpl) vm.loadUncertaintyVariantModel();
+		return uncertaintyModel.getVariationPoints();
+	}
+
+	/*
+	 * Gets the last element of an action sequence as we know that it must be a
+	 * violated constraint action sequence
+	 */
+	private ViolatedConstraintsActionSequence getViolatedConstraintSequenceFromActionSequence(
+			ActionSequence actionSequence) {
+		ViolatedConstraintsActionSequence violatedConstraints = (ViolatedConstraintsActionSequence) actionSequence
+				.get(actionSequence.size() - 1);
+		return violatedConstraints;
+	}
+
+	private String createOccuringElementString(ArrayList<ActionSequenceElement<?>> occuringSequenceElements) {
+		String occuringElementString = "";
+
+		int n = 0;
+		for (ActionSequenceElement<?> occuringElementSequence : occuringSequenceElements) {
+			EntityImpl occuringElement = (EntityImpl) occuringElementSequence.getElement();
+			var occuringName = occuringElement.getEntityName();
+			var locationName = ((BasicComponent) occuringElement.eContainer().eContainer()).getEntityName();
+			if (n != 0) {
+				occuringElementString += ", ";
+			}
+			occuringElementString += occuringName + " on " + locationName;
+			n++;
+		}
+
+		return occuringElementString;
+	}
+
+	private String createLiteralString(ArrayList<LiteralImpl> occuringLiterals) {
+		String literalString = "";
+		int i = 0;
+		for (Literal literal : occuringLiterals) {
+			if (i != 0) {
+				literalString += ", ";
+			}
+			literalString += literal.getName();
+			i++;
+		}
+		return literalString;
+	}
 }

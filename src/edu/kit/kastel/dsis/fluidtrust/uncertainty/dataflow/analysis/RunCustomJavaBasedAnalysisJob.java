@@ -51,14 +51,8 @@ public abstract class RunCustomJavaBasedAnalysisJob extends SequentialBlackboard
 			throw new IllegalStateException("prepare job before executing it");
 		}
 		
-		var blackboard = getBlackboard();
-		
 		var usageModel = (UsageModel) getBlackboard().getContents(usageModelLocation).get(0);
-		var test = getBlackboard().getContents(allocationModelLocation);
 		var allocationModel = (Allocation) getBlackboard().getContents(allocationModelLocation).get(0);
-		allocationModel.getAllocationContexts_Allocation().forEach((a) -> {
-			var x = 1;
-		});
 		var modelPartition = getBlackboard().getPartition(usageModelLocation.getPartitionID());
 		var dataDictionaries = modelPartition.getElement(DictionaryPackage.eINSTANCE.getPCMDataDictionary()).stream()
 				.filter(PCMDataDictionary.class::isInstance).map(PCMDataDictionary.class::cast)

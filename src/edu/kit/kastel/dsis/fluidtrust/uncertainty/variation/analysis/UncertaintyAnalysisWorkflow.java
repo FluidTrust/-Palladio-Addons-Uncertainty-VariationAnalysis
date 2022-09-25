@@ -21,16 +21,11 @@ import org.palladiosimulator.dataflow.confidentiality.pcm.dddsl.DDDslStandaloneS
 import de.uka.ipd.sdq.workflow.Workflow;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
-import de.uka.ipd.sdq.workflow.jobs.SequentialJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.DataflowAnalysisJob;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.RunOnlineShopAnalysisJob;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NaiveResultInterpretation;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NewResultInterpretation;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.NextResultInterpretation;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step3ResultInterpretation;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step3_1ResultInterpretation;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializationException;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializerBuilder;
 import tools.mdsd.library.standalone.initialization.emfprofiles.EMFProfileInitializationTask;
@@ -41,16 +36,21 @@ public class UncertaintyAnalysisWorkflow {
 	public static void main(String[] args) throws JobFailedException, UserCanceledException, StandaloneInitializationException, IOException {
 		init();
 		
+		// Create a job sequence which contains first the dataflow analysis jobs and then the uncertainty analysis job
 		SequentialBlackboardInteractingJob<KeyValueMDSDBlackboard> jobSequence = new SequentialBlackboardInteractingJob<KeyValueMDSDBlackboard>();
+		// A blackboard is used to share data between jobs
 		KeyValueMDSDBlackboard blackboard = new KeyValueMDSDBlackboard();
+		// resultViolationsKey will contain the violations
 		blackboard.put("resultViolationsKey", new ArrayList<ActionBasedQueryResult>());
 		jobSequence.setBlackboard(blackboard);
 		
 		RunOnlineShopAnalysisJob shopJob = new RunOnlineShopAnalysisJob();
 		
+		// Get the amount of generated scenarios
 		long scenarioCount = Files.find(Paths.get("scenarios"), 1, (path, attributes) -> attributes.isDirectory()).count() - 1;
 		
-		for (int i = (int) (scenarioCount - 1); i >= 0; i--) {
+		// Create a dataflow analysis job for every scenario
+		for (int i = 0; i < scenarioCount; i++) {
 			final var allocationURI = TestInitializer.getModelURI("scenarios/configuration_" + Integer.toString(i) + "/default.allocation");
 			final var usageURI = TestInitializer.getModelURI("scenarios/configuration_" + Integer.toString(i) + "/default.usagemodel");
 			
@@ -58,6 +58,7 @@ public class UncertaintyAnalysisWorkflow {
 			jobSequence.add(dataflowJob);
 		}
 		
+		// We insert the wanted interpretation into the constructor
 		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new Step3ResultInterpretation());
 		
 		jobSequence.add(job);
@@ -68,6 +69,9 @@ public class UncertaintyAnalysisWorkflow {
 		workflow.execute(monitor);
 	}
 	
+	/*
+	 * Some initializing stuff copied from the dataflow analysis
+	 */
 	private static void init() throws StandaloneInitializationException {
 		BasicConfigurator.resetConfiguration();
 		StandaloneInitializerBuilder.builder()
