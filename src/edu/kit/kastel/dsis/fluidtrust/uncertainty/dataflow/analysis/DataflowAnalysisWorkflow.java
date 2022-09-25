@@ -47,7 +47,7 @@ public class DataflowAnalysisWorkflow extends SequentialBlackboardInteractingJob
 		Logger.getLogger(AbstractCleaningLinker.class).setLevel(Level.WARN);
 
 		// build and run job
-		this.add(new DataflowAnalysisJob(allocationURI, usageURI, runAnalysisJob));
+		this.add(new DataflowAnalysisJob(allocationURI, usageURI, runAnalysisJob, 0));
 	}
 
 }

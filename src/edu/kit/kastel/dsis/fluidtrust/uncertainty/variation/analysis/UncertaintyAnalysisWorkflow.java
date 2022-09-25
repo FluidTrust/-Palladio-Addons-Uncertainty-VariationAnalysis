@@ -25,7 +25,7 @@ import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.DataflowAnalysisJob;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.RunOnlineShopAnalysisJob;
-import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step3ResultInterpretation;
+import edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation.Step4ResultInterpretation;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializationException;
 import tools.mdsd.library.standalone.initialization.StandaloneInitializerBuilder;
 import tools.mdsd.library.standalone.initialization.emfprofiles.EMFProfileInitializationTask;
@@ -54,12 +54,12 @@ public class UncertaintyAnalysisWorkflow {
 			final var allocationURI = TestInitializer.getModelURI("scenarios/configuration_" + Integer.toString(i) + "/default.allocation");
 			final var usageURI = TestInitializer.getModelURI("scenarios/configuration_" + Integer.toString(i) + "/default.usagemodel");
 			
-			DataflowAnalysisJob dataflowJob = new DataflowAnalysisJob(allocationURI, usageURI, shopJob);
+			DataflowAnalysisJob dataflowJob = new DataflowAnalysisJob(allocationURI, usageURI, shopJob, i);
 			jobSequence.add(dataflowJob);
 		}
 		
 		// We insert the wanted interpretation into the constructor
-		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new Step3ResultInterpretation());
+		UncertaintyAnalysisJob job = new UncertaintyAnalysisJob(new Step4ResultInterpretation());
 		
 		jobSequence.add(job);
 		

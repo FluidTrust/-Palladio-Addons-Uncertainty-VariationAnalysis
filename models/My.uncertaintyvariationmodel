@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
   <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Encryption Choice">
     <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_7woNgCtoEe2NjrAZnTrfBw"/>
   </variationPoints>
@@ -17,15 +17,7 @@
   <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Data Sensivity Choice">
     <varyingSubjects xsi:type="usagemodel:Branch" href="source/default.usagemodel#_oL2yYA9FEe24U_FyjWYc1w"/>
   </variationPoints>
-  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.AssemblyStateHandler" entityName="Database Choice">
-    <varyingSubjects xsi:type="composition:AssemblyContext" href="source/default.system#_5qOmUITjEeywmO_IpTxeAg"/>
-    <variationDescription>
-      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
-        <link xsi:type="repository:BasicComponent" href="source/default.repository#_I9a5AITjEeywmO_IpTxeAg"/>
-      </targetVariations>
-      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
-        <link xsi:type="repository:BasicComponent" href="source/default.repository#_aPOUYARNEe2Fe7asWjw9lQ"/>
-      </targetVariations>
-    </variationDescription>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Database Choice">
+    <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_m14okDzlEe2J7qsIELsCWg"/>
   </variationPoints>
 </UncertaintyVariationModel:UncertaintyVariations>

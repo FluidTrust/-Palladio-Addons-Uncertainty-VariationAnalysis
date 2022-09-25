@@ -18,14 +18,16 @@ public class DataflowAnalysisJob extends SequentialBlackboardInteractingJob<KeyV
 	private final URI allocationURI;
 	private final URI usageURI;
 	private final RunCustomJavaBasedAnalysisJob runAnalysisJob;
+	private final int index;
 	protected static final String PCM_MODEL_PARTITION = "pcmModels";
 	private static final String ALL_CHARACTERISTICS_RESULT_KEY = "resultAllCharacteristicsKey";
 	private static final String VIOLATIONS_RESULT_KEY = "resultViolationsKey";
 
-	public DataflowAnalysisJob(URI allocationURI, URI usageURI, RunCustomJavaBasedAnalysisJob runAnalysisJob) {
+	public DataflowAnalysisJob(URI allocationURI, URI usageURI, RunCustomJavaBasedAnalysisJob runAnalysisJob, int index) {
 		this.usageURI = usageURI;
 		this.allocationURI = allocationURI;
 		this.runAnalysisJob = runAnalysisJob;
+		this.index = index;
 	}
 
 	@Override
@@ -56,7 +58,7 @@ public class DataflowAnalysisJob extends SequentialBlackboardInteractingJob<KeyV
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return "DataflowAnalysisJob";
+		return "DataflowAnalysisJob " + this.index;
 	}
 
 }

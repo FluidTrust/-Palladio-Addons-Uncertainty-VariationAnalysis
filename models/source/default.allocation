@@ -9,8 +9,8 @@
     <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
     <assemblyContext_AllocationContext href="default.system#_4YTEYITjEeywmO_IpTxeAg"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_ourAgARNEe2Fe7asWjw9lQ" entityName="Allocation_Assembly_DatabaseServiceB">
-    <resourceContainer_AllocationContext href="My.resourceenvironment#_upfkIITgEeywmO_IpTxeAg"/>
-    <assemblyContext_AllocationContext href="default.system#_5qOmUITjEeywmO_IpTxeAg"/>
+  <allocationContexts_Allocation id="_-uPdoD0NEe2J7qsIELsCWg" entityName="Allocation_Assembly_DatabaseServiceB">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+    <assemblyContext_AllocationContext href="default.system#_6DLcsD0NEe2J7qsIELsCWg"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>
