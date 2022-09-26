@@ -14,7 +14,7 @@ public class TestInitializer {
     public static void init() throws StandaloneInitializationException {
         StandaloneInitializerBuilder.builder()
                 .registerProjectURI(Activator.class,
-                        "edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis")
+                        "Palladio-Addons-Uncertainty-VariationAnalysis")
                 .addCustomTask(new Log4jInitilizationTask()).build().init();
     }
 
@@ -24,6 +24,6 @@ public class TestInitializer {
 
     private static URI getRelativePluginURI(final String relativePath) {
         return URI.createPlatformPluginURI(
-               "/edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis/" + relativePath, false);
+               "/Palladio-Addons-Uncertainty-VariationAnalysis/" + relativePath, false);
     }
 }

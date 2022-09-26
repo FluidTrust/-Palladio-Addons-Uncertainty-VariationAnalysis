@@ -111,7 +111,7 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 	 */
 	private EList<VariationPoint> getVariationPoints() {
 		final URI umURI = URI.createPlatformPluginURI(
-				"/edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis/models/My.uncertaintyvariationmodel",
+				"/Palladio-Addons-Uncertainty-VariationAnalysis/models/My.uncertaintyvariationmodel",
 				false);
 
 		ResourceAbstraction rs = new ModelResourceAbstraction();

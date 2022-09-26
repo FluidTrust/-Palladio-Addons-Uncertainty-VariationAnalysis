@@ -76,7 +76,7 @@ public class UncertaintyAnalysisWorkflow {
 		BasicConfigurator.resetConfiguration();
 		StandaloneInitializerBuilder.builder()
         .registerProjectURI(Activator.class,
-                "edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis")
+                "Palladio-Addons-Uncertainty-VariationAnalysis")
         .addCustomTask(new Log4jInitilizationTask()).build().init();
 		
 		try {
