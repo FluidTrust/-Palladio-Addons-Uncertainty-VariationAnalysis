@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_JiPBICHdEd6lJo4DCALHMw" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="My.resourceenvironment#/0"/>
+  <allocationContexts_Allocation id="_XrD8sITkEeywmO_IpTxeAg" entityName="Allocation_Assembly_DatabaseServiceA">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+    <assemblyContext_AllocationContext href="default.system#_5qOmUITjEeywmO_IpTxeAg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_Zt5-MITkEeywmO_IpTxeAg" entityName="Allocation_Assembly_OnlineShop">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+    <assemblyContext_AllocationContext href="default.system#_4YTEYITjEeywmO_IpTxeAg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_-uPdoD0NEe2J7qsIELsCWg" entityName="Allocation_Assembly_DatabaseServiceB">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
+    <assemblyContext_AllocationContext href="default.system#_6DLcsD0NEe2J7qsIELsCWg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_6qFt4D0cEe2J7qsIELsCWg" entityName="Allocation_Assembly_BackupService">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_lpYxsD0QEe2J7qsIELsCWg"/>
+    <assemblyContext_AllocationContext href="default.system#_mntPkD0aEe2J7qsIELsCWg"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

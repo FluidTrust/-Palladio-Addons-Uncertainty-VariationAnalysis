@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://palladiosimulator.org/dataflow/dictionary/characterized/1.0" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:expressions="http://palladiosimulator.org/dataflow/dictionary/characterized/expressions/1.0" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usagemodel:UsageModel>
+    <usageScenario_UsageModel id="_LPnI8CHdEd6lJo4DCALHMw" entityName="ShoppingUsageScenario">
+      <scenarioBehaviour_UsageScenario id="_LPwS4CHdEd6lJo4DCALHMw" entityName="defaultUsageScenarioBehaviour">
+        <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_LPwS4SHdEd6lJo4DCALHMw" successor="_oL2yYA9FEe24U_FyjWYc1w"/>
+        <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_oL2yYA9FEe24U_FyjWYc1w"/>
+        <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_oL2yYA9FEe24U_FyjWYc1w" entityName="BranchDataSensivity" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw">
+          <branchTransitions_Branch branchProbability="1.0">
+            <branchedBehaviour_BranchTransition id="_A5-R8A9GEe24U_FyjWYc1w">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_A5-R8Q9GEe24U_FyjWYc1w" successor="_FWT6YA9GEe24U_FyjWYc1w"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_A5-R8g9GEe24U_FyjWYc1w" predecessor="_FWT6YA9GEe24U_FyjWYc1w"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_FWT6YA9GEe24U_FyjWYc1w" entityName="EntryLevelSystemCall_DeliveryAddress_NON-PERSONAL" successor="_A5-R8g9GEe24U_FyjWYc1w" predecessor="_A5-R8Q9GEe24U_FyjWYc1w">
+                <providedRole_EntryLevelSystemCall href="default.system#_CWo80ITkEeywmO_IpTxeAg"/>
+                <operationSignature__EntryLevelSystemCall href="default.repository#_Aej24ARGEe2F--lV7xt4Rw"/>
+                <inputParameterUsages_EntryLevelSystemCall>
+                  <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+                    <specification_VariableCharacterisation specification="false"/>
+                    <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_OSQhsA9GEe24U_FyjWYc1w">
+                      <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@0"/>
+                      <literal href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@0.literals@0"/>
+                    </lhs>
+                    <rhs xsi:type="expressions:False" id="_OSQhsQ9GEe24U_FyjWYc1w"/>
+                  </variableCharacterisation_VariableUsage>
+                  <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="userData"/>
+                </inputParameterUsages_EntryLevelSystemCall>
+              </actions_ScenarioBehaviour>
+            </branchedBehaviour_BranchTransition>
+          </branchTransitions_Branch>
+        </actions_ScenarioBehaviour>
+      </scenarioBehaviour_UsageScenario>
+    </usageScenario_UsageModel>
+  </usagemodel:UsageModel>
+  <emfprofileapplication:ProfileApplication>
+    <importedProfiles nsURI="org.palladiosimulator.dataflow.confidentiality.pcm.model.profile" location="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.model.profile/profile.emfprofile_diagram"/>
+  </emfprofileapplication:ProfileApplication>
+</xmi:XMI>
