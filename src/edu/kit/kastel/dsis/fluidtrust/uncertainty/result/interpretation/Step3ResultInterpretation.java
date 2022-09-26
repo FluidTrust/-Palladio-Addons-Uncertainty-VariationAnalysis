@@ -3,6 +3,7 @@ package edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -29,6 +30,7 @@ import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequence;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequenceElement;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.SEFFActionSequenceElementImpl;
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.ViolatedConstraintsActionSequence;
+import utility.AnalysisUtility;
 
 public class Step3ResultInterpretation implements ResultInterpretation {
 
@@ -61,11 +63,14 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 			for (var result : violation.getResults().entrySet()) {
 				ActionSequence actionSequence = result.getKey();
 
-				ViolatedConstraintsActionSequence violatedConstraints = this
+				ArrayList<ViolatedConstraintsActionSequence> violatedConstraintsList = this
 						.getViolatedConstraintSequenceFromActionSequence(actionSequence);
-				ArrayList<LiteralImpl> occuringLiterals = violatedConstraints.getLiterals();
-				ArrayList<ActionSequenceElement<?>> occuringSequenceElements = violatedConstraints
-						.getOccuringElements();
+				ArrayList<LiteralImpl> occuringLiterals = new ArrayList<>();
+				ArrayList<ActionSequenceElement<?>> occuringSequenceElements = new ArrayList<>();
+				violatedConstraintsList.forEach(vC -> {
+					occuringLiterals.addAll(vC.getLiterals());
+					occuringSequenceElements.addAll(vC.getOccuringElements());
+				});
 
 				occuringStrings.add(this.createCombinedString(occuringSequenceElements, occuringLiterals));
 
@@ -125,11 +130,17 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 	 * Gets the last element of an action sequence as we know that it must be a
 	 * violated constraint action sequence
 	 */
-	private ViolatedConstraintsActionSequence getViolatedConstraintSequenceFromActionSequence(
+	private ArrayList<ViolatedConstraintsActionSequence> getViolatedConstraintSequenceFromActionSequence(
 			ActionSequence actionSequence) {
+		ArrayList<ViolatedConstraintsActionSequence> filteredSequences = new ArrayList<>();
+		actionSequence.forEach(e -> {
+			if (e instanceof ViolatedConstraintsActionSequence) {
+				filteredSequences.add((ViolatedConstraintsActionSequence) e);
+			}
+		});
 		ViolatedConstraintsActionSequence violatedConstraints = (ViolatedConstraintsActionSequence) actionSequence
 				.get(actionSequence.size() - 1);
-		return violatedConstraints;
+		return filteredSequences;
 	}
 
 	private String createOccuringElementString(ArrayList<ActionSequenceElement<?>> occuringSequenceElements) {

@@ -42,6 +42,7 @@ public class UncertaintyAnalysisWorkflow {
 		KeyValueMDSDBlackboard blackboard = new KeyValueMDSDBlackboard();
 		// resultViolationsKey will contain the violations
 		blackboard.put("resultViolationsKey", new ArrayList<ActionBasedQueryResult>());
+		blackboard.put("resultNoViolationsKey", new ArrayList<ActionBasedQueryResult>());
 		jobSequence.setBlackboard(blackboard);
 		
 		RunOnlineShopAnalysisJob shopJob = new RunOnlineShopAnalysisJob();

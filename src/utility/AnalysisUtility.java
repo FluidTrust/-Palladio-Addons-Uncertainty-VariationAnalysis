@@ -1,4 +1,4 @@
-package edu.kit.kastel.dsis.fluidtrust.uncertainty.result.interpretation;
+package utility;
 
 import java.util.HashMap;
 import java.util.HashSet;
