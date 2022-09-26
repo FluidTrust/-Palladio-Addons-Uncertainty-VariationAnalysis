@@ -33,6 +33,9 @@ import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.ViolatedCons
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis.TestInitializer;
 
 public class AnalysisUtility {
+	public final static String NO_VIOLATIONS_KEY = "resultNoViolationsKey";
+	public final static String VIOLATIONS_KEY = "resultViolationsKey";
+	
 	public static HashSet<String> getIdsFromActionSequence(ActionSequence actionSequence) {
 		HashMap<String, AllocationContext> assemblyContextIdToAllocationContext = getAssemblyToAllocationMapping(
 				getAllocationModel().getAllocationContexts_Allocation());

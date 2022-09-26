@@ -67,17 +67,14 @@ public abstract class RunCustomJavaBasedAnalysisJob extends SequentialBlackboard
 		getBlackboard().put(allCharacteristicsResultKey, allCharacteristics);
 		monitor.worked(1);
 
-		var detectedViolations = findViolations(dataDictionaries, allCharacteristics);
-		if (!detectedViolations.getResults().isEmpty()) {
-			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(violationResultKey).get();
-			occuredViolations.add(detectedViolations);
-		}
+		var detectedViolations = findViolations(dataDictionaries, allCharacteristics, getBlackboard());
+		
 		monitor.worked(1);
 		monitor.done();
 	}
 	
 	protected abstract ActionBasedQueryResult findViolations(List<PCMDataDictionary> dataDictionaries,
-			ActionBasedQueryResult allCharacteristics) throws JobFailedException;
+			ActionBasedQueryResult allCharacteristics, KeyValueMDSDBlackboard blackboard) throws JobFailedException;
 
 	protected EnumCharacteristicType findByName(Collection<EnumCharacteristicType> enumCharacteristicTypes, String name)
 			throws JobFailedException {

@@ -30,9 +30,13 @@ import tools.mdsd.library.standalone.initialization.StandaloneInitializationExce
 import tools.mdsd.library.standalone.initialization.StandaloneInitializerBuilder;
 import tools.mdsd.library.standalone.initialization.emfprofiles.EMFProfileInitializationTask;
 import tools.mdsd.library.standalone.initialization.log4j.Log4jInitilizationTask;
+import utility.AnalysisUtility;
+
 import org.palladiosimulator.dataflow.confidentiality.transformation.workflow.blackboards.KeyValueMDSDBlackboard;
 
 public class UncertaintyAnalysisWorkflow {
+	
+	
 	public static void main(String[] args) throws JobFailedException, UserCanceledException, StandaloneInitializationException, IOException {
 		init();
 		
@@ -42,7 +46,7 @@ public class UncertaintyAnalysisWorkflow {
 		KeyValueMDSDBlackboard blackboard = new KeyValueMDSDBlackboard();
 		// resultViolationsKey will contain the violations
 		blackboard.put("resultViolationsKey", new ArrayList<ActionBasedQueryResult>());
-		blackboard.put("resultNoViolationsKey", new ArrayList<ActionBasedQueryResult>());
+		blackboard.put(AnalysisUtility.NO_VIOLATIONS_KEY, new ArrayList<ActionBasedQueryResult>());
 		jobSequence.setBlackboard(blackboard);
 		
 		RunOnlineShopAnalysisJob shopJob = new RunOnlineShopAnalysisJob();

@@ -6,12 +6,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.dictionary.PCMDataDictionary;
+import org.palladiosimulator.dataflow.confidentiality.transformation.workflow.blackboards.KeyValueMDSDBlackboard;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.impl.LiteralImpl;
 import org.palladiosimulator.pcm.seff.impl.SetVariableActionImpl;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionBasedQueryResult.ActionBasedQueryResultDTO;
+import utility.AnalysisUtility;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequence;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.ActionSequenceElement;
 import edu.kit.kastel.dsis.fluidtrust.casestudy.pcs.analysis.dto.CharacteristicValue;
@@ -20,7 +22,7 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 
 	@Override
 	protected ActionBasedQueryResult findViolations(List<PCMDataDictionary> dataDictionaries,
-			ActionBasedQueryResult allCharacteristics) throws JobFailedException {
+			ActionBasedQueryResult allCharacteristics, KeyValueMDSDBlackboard blackboard) throws JobFailedException {
 		var enumCharacteristicTypes = getAllEnumCharacteristicTypes(dataDictionaries);
 
 		var ctServerLocation = findByName(enumCharacteristicTypes, "ServerLocation");
@@ -142,6 +144,15 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				noViolations.addResult(actionSequences.get(0), new ActionBasedQueryResultDTO(null, null, null));
 			}
 
+		}
+		
+		if (!noViolations.getResults().isEmpty()) {
+			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(AnalysisUtility.NO_VIOLATIONS_KEY).get();
+			occuredViolations.add(noViolations);
+		}
+		if (!violations.getResults().isEmpty()) {
+			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(AnalysisUtility.VIOLATIONS_KEY).get();
+			occuredViolations.add(violations);
 		}
 
 		return violations;

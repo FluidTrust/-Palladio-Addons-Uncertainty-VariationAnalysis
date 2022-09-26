@@ -37,16 +37,18 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 	@Override
 	public Object getInterpretation(ArrayList<ActionBasedQueryResult> violations) {
 		Step2ResultInterpretation previousInterpretation = new Step2ResultInterpretation();
-		previousInterpretation.getInterpretation(violations);		
-		
+		previousInterpretation.getInterpretation(violations);
+
 		// Get variation Points from uncertainty model
 		var variationPoints = this.getVariationPoints();
 
 		HashSet<String> uncertaintyPointIds = new HashSet<String>();
 		HashMap<String, VariationPoint> uncertaintyPointIdsToVariationPoint = new HashMap<>();
+		HashSet<String> uncertaintyNames = new HashSet<String>();
 
 		for (VariationPoint vp : variationPoints) {
 			var varyingSubjects = vp.getVaryingSubjects();
+			uncertaintyNames.add(vp.getEntityName());
 			for (var varyingSubject : varyingSubjects) {
 				String id = varyingSubject.getId();
 				uncertaintyPointIds.add(id);
@@ -58,7 +60,8 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 		HashSet<VariationPoint> influencingUncertainties = new HashSet<>();
 		HashSet<String> occuringStrings = new HashSet<>();
 
-		// Collect the reason why a violation occured and get all the uncertainty points lying on the sequence
+		// Collect the reason why a violation occured and get all the uncertainty points
+		// lying on the sequence
 		for (var violation : violations) {
 			for (var result : violation.getResults().entrySet()) {
 				ActionSequence actionSequence = result.getKey();
@@ -95,13 +98,22 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 		System.out.println("\n");
 
 		System.out.println("The following uncertainties contribute to these violations:");
-		influencingUncertainties.forEach(iu -> System.out.println("Entity Name: " + iu.getEntityName()));
+		influencingUncertainties.forEach(iu -> System.out.println(" - " + iu.getEntityName()));
+		
+		System.out.println("\n");
+
+		System.out.println("The following uncertainties do not contribute to these violations:");
+		uncertaintyNames.stream()
+				.filter(name -> influencingUncertainties.stream().filter(u -> u.getEntityName().equals(name))
+						.collect(Collectors.toList()).size() == 0)
+				.collect(Collectors.toList()).forEach(name -> System.out.println(" - " + name));
 
 		return null;
 	}
 
 	/*
-	 * Creates the output string that contains the element where the violation occurred and which literals were set
+	 * Creates the output string that contains the element where the violation
+	 * occurred and which literals were set
 	 */
 	private String createCombinedString(ArrayList<ActionSequenceElement<?>> occuringSequenceElements,
 			ArrayList<LiteralImpl> occuringLiterals) {
@@ -116,8 +128,7 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 	 */
 	private EList<VariationPoint> getVariationPoints() {
 		final URI umURI = URI.createPlatformPluginURI(
-				"/Palladio-Addons-Uncertainty-VariationAnalysis/models/My.uncertaintyvariationmodel",
-				false);
+				"/Palladio-Addons-Uncertainty-VariationAnalysis/models/My.uncertaintyvariationmodel", false);
 
 		ResourceAbstraction rs = new ModelResourceAbstraction();
 		VariationManager vm = new VariationManager(umURI, rs);
