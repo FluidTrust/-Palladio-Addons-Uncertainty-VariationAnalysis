@@ -33,6 +33,7 @@ import edu.kit.kastel.dsis.fluidtrust.uncertainty.dataflow.analysis.ViolatedCons
 import edu.kit.kastel.dsis.fluidtrust.uncertainty.variation.analysis.TestInitializer;
 
 public class AnalysisUtility {
+	// Keys for the blackboard
 	public final static String NO_VIOLATIONS_KEY = "resultNoViolationsKey";
 	public final static String VIOLATIONS_KEY = "resultViolationsKey";
 	

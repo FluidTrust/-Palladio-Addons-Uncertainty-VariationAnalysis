@@ -44,7 +44,7 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 
 		HashSet<String> uncertaintyPointIds = new HashSet<String>();
 		HashMap<String, VariationPoint> uncertaintyPointIdsToVariationPoint = new HashMap<>();
-		HashSet<String> uncertaintyNames = new HashSet<String>();
+		HashSet<String> uncertaintyNames = new HashSet<String>(); // use this to identify non influencing uncertainties
 
 		for (VariationPoint vp : variationPoints) {
 			var varyingSubjects = vp.getVaryingSubjects();

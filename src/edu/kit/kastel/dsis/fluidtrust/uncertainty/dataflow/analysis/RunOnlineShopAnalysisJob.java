@@ -35,8 +35,11 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 		// System.out.println("\n\nELEMENTS AND CHARACTERISTICS --------------------");
 
 		for (var resultEntry : allCharacteristics.getResults().entrySet()) {
-			// TODO: Refactor this without a list. There can only be one violating sequence
-			// and one that does not.
+			// We use these variables to split action sequences. We add elements until a
+			// violation occurs. Then we create a new action sequence. If a violation occurs
+			// again, we concat the new action sequence with the one before that. Otherwise
+			// we can add the remaining part of the action sequence as a no violation
+			// sequence. This improves analysis results.
 			int actionSequenceIndex = 0;
 			ArrayList<ActionSequence> actionSequences = new ArrayList<>();
 			ArrayList<ArrayList<ActionBasedQueryResultDTO>> queryResults = new ArrayList<>();
@@ -46,6 +49,8 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				try {
 					actionSequences.get(actionSequenceIndex);
 				} catch (IndexOutOfBoundsException e) {
+					// this case occurs if we start the algorithm or if a new action sequence must
+					// be added
 					actionSequences.add(actionSequenceIndex, new ActionSequence(new ArrayList<>()));
 					queryResults.add(actionSequenceIndex, new ArrayList<>());
 				}
@@ -53,7 +58,6 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				ActionSequence currentActionSequence = actionSequences.get(actionSequenceIndex);
 				var currentQueryResultList = queryResults.get(actionSequenceIndex);
 
-				ActionSequence actionSequence = resultEntry.getKey();
 				ActionSequenceElement<?> actionSequenceElement = queryResult.getElement();
 				currentActionSequence.add(actionSequenceElement);
 
@@ -117,7 +121,7 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 
 					overallViolation = true;
 
-					if (actionSequenceIndex != 0) {
+					if (actionSequenceIndex != 0) { // concat with previous element
 						var previousActionSequence = actionSequences.get(actionSequenceIndex - 1);
 						previousActionSequence.addAll(currentActionSequence);
 
@@ -126,13 +130,15 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 
 						actionSequences.remove(actionSequenceIndex);
 						queryResults.remove(actionSequenceIndex);
-					} else {
+					} else { // increase
 						actionSequenceIndex++;
 					}
 				}
 			}
 
+			// if there was no violation, we only have one element
 			if (overallViolation) {
+				// otherwise there are two elements -> TODO: Refactor without the lists
 				for (var queryResult : queryResults.get(0)) {
 					violations.addResult(actionSequences.get(0), queryResult);
 				}
@@ -145,13 +151,16 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 			}
 
 		}
-		
+
+		// Add violating sequences and non violating sequences to the blackboard
 		if (!noViolations.getResults().isEmpty()) {
-			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(AnalysisUtility.NO_VIOLATIONS_KEY).get();
+			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard()
+					.get(AnalysisUtility.NO_VIOLATIONS_KEY).get();
 			occuredViolations.add(noViolations);
 		}
 		if (!violations.getResults().isEmpty()) {
-			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard().get(AnalysisUtility.VIOLATIONS_KEY).get();
+			ArrayList<ActionBasedQueryResult> occuredViolations = (ArrayList<ActionBasedQueryResult>) getBlackboard()
+					.get(AnalysisUtility.VIOLATIONS_KEY).get();
 			occuredViolations.add(violations);
 		}
 

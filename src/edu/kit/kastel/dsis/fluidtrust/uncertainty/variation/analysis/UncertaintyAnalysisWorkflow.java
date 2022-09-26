@@ -45,7 +45,7 @@ public class UncertaintyAnalysisWorkflow {
 		// A blackboard is used to share data between jobs
 		KeyValueMDSDBlackboard blackboard = new KeyValueMDSDBlackboard();
 		// resultViolationsKey will contain the violations
-		blackboard.put("resultViolationsKey", new ArrayList<ActionBasedQueryResult>());
+		blackboard.put(AnalysisUtility.VIOLATIONS_KEY, new ArrayList<ActionBasedQueryResult>());
 		blackboard.put(AnalysisUtility.NO_VIOLATIONS_KEY, new ArrayList<ActionBasedQueryResult>());
 		jobSequence.setBlackboard(blackboard);
 		
