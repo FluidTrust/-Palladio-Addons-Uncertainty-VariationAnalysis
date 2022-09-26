@@ -13,4 +13,8 @@
     <resourceContainer_AllocationContext href="My.resourceenvironment#_qvz80ITgEeywmO_IpTxeAg"/>
     <assemblyContext_AllocationContext href="default.system#_6DLcsD0NEe2J7qsIELsCWg"/>
   </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_6qFt4D0cEe2J7qsIELsCWg" entityName="Allocation_Assembly_BackupService">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_lpYxsD0QEe2J7qsIELsCWg"/>
+    <assemblyContext_AllocationContext href="default.system#_mntPkD0aEe2J7qsIELsCWg"/>
+  </allocationContexts_Allocation>
 </allocation:Allocation>

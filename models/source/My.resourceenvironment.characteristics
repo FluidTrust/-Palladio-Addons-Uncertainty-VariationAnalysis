@@ -8,4 +8,8 @@
     <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@1"/>
     <values href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@1.literals@1"/>
   </characteristics>
+  <characteristics xsi:type="characteristics:EnumCharacteristic" id="_n7TxAD0QEe2J7qsIELsCWg">
+    <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicTypes@1"/>
+    <values href="dic.pddc#_AQnL0IThEeywmO_IpTxeAg-characteristicEnumerations@1.literals@0"/>
+  </characteristics>
 </characteristics:Characteristics>
