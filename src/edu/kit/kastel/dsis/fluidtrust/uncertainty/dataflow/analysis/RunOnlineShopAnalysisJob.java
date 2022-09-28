@@ -102,15 +102,18 @@ public class RunOnlineShopAnalysisJob extends RunCustomJavaBasedAnalysisJob {
 				 */
 				var violatingSequenceElement = new ViolatedConstraintsActionSequence();
 				boolean violationOccured = false;
+				
 				if (serverLocations.contains("nonEU") && dataSensitivites.contains("Personal")) {
 					violatingSequenceElement.addLiteral((LiteralImpl) serverLocationLiterals.get(0));
 					violatingSequenceElement.addLiteral((LiteralImpl) dataSensivityLiterals.get(0));
 					violatingSequenceElement.addOccuringElement(actionSequenceElement);
 					violationOccured = true;
-				} else if (element instanceof SetVariableActionImpl && dataEncryptions.contains("NonEncrypted")
+				}
+				if (element instanceof SetVariableActionImpl && dataEncryptions.contains("NonEncrypted")
 						&& !dataEncryptions.contains("Encrypted")) {
 					violatingSequenceElement.addLiteral((LiteralImpl) dataEncryptionLiterals.get(0));
-					violatingSequenceElement.addOccuringElement(actionSequenceElement);
+					if (!violatingSequenceElement.getOccuringElements().contains(actionSequenceElement))
+						violatingSequenceElement.addOccuringElement(actionSequenceElement);
 					violationOccured = true;
 				}
 				if (violationOccured) {

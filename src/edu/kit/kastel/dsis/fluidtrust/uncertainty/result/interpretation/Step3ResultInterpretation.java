@@ -36,8 +36,11 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 
 	@Override
 	public Object getInterpretation(ArrayList<ActionBasedQueryResult> violations) {
-		Step2ResultInterpretation previousInterpretation = new Step2ResultInterpretation();
-		previousInterpretation.getInterpretation(violations);
+		// Step2ResultInterpretation previousInterpretation = new
+		// Step2ResultInterpretation();
+		// previousInterpretation.getInterpretation(violations);
+
+		System.out.println("\nINDIVIDUAL RESULTS\n\n--------------------\n\n");
 
 		// Get variation Points from uncertainty model
 		var variationPoints = this.getVariationPoints();
@@ -54,7 +57,6 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 				uncertaintyPointIds.add(id);
 				uncertaintyPointIdsToVariationPoint.put(id, vp);
 			}
-
 		}
 
 		HashSet<VariationPoint> influencingUncertainties = new HashSet<>();
@@ -63,8 +65,24 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 		// Collect the reason why a violation occured and get all the uncertainty points
 		// lying on the sequence
 		for (var violation : violations) {
+			System.out.println("The following sequence produced a violation:");
+			
+			String elementString = "";
+
 			for (var result : violation.getResults().entrySet()) {
 				ActionSequence actionSequence = result.getKey();
+
+				for (ActionSequenceElement<?> actionElement : actionSequence) {
+					if (!(actionElement instanceof ViolatedConstraintsActionSequence)) {
+						String elementName = ((EntityImpl) actionElement.getElement()).getEntityName();
+
+						if (elementString.length() != 0)
+							elementString += " -> ";
+						elementString += elementName;
+					}
+				}
+
+				System.out.println(elementString + "\n");
 
 				ArrayList<ViolatedConstraintsActionSequence> violatedConstraintsList = this
 						.getViolatedConstraintSequenceFromActionSequence(actionSequence);
@@ -75,23 +93,34 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 					occuringSequenceElements.addAll(vC.getOccuringElements());
 				});
 
-				occuringStrings.add(this.createCombinedString(occuringSequenceElements, occuringLiterals));
+				String occuringString = this.createCombinedString(occuringSequenceElements, occuringLiterals);
+				occuringStrings.add(occuringString);
+				System.out.println("The violation occured on:");
+				System.out.println(occuringString + "\n");
 
 				// Get all ids of the elements in the action sequence
 				HashSet<String> violationIds = AnalysisUtility.getIdsFromActionSequence(actionSequence);
 
+				System.out.println("The following uncertainty impcats contribute to this violation:");
 				for (var violationId : violationIds) {
 					for (var uncertaintyPointId : uncertaintyPointIds) {
 						// search for ids in the variation points
 						if (violationId.equals(uncertaintyPointId)) {
+							System.out.println(" - " + uncertaintyPointIdsToVariationPoint.get(uncertaintyPointId).getEntityName());
 							influencingUncertainties.add(uncertaintyPointIdsToVariationPoint.get(uncertaintyPointId));
 						}
 					}
 				}
 			}
+			System.out.println("\n\n\n");
 		}
 
 		// PRINT OUTPUT AFTER ANALYSIS
+		System.out.println("==================\n\nSUMMARY\n\n==================\n\n");
+
+		Step2ResultInterpretation previousInterpretation = new Step2ResultInterpretation();
+		previousInterpretation.getInterpretation(violations);
+
 		System.out.println("Where and with which literals do violations occur?");
 		occuringStrings.forEach(os -> System.out.println(os));
 
@@ -99,7 +128,7 @@ public class Step3ResultInterpretation implements ResultInterpretation {
 
 		System.out.println("The following uncertainties contribute to these violations:");
 		influencingUncertainties.forEach(iu -> System.out.println(" - " + iu.getEntityName()));
-		
+
 		System.out.println("\n");
 
 		System.out.println("The following uncertainties do not contribute to these violations:");
