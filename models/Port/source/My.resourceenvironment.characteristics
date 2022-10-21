@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<characteristics:Characteristics xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:characteristics="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/characteristics" id="_MikGgM-cEeykT8lW6Zetnw">
+  <characteristics xsi:type="characteristics:EnumCharacteristic" id="_E4CfANBFEeykT8lW6Zetnw"/>
+  <characteristics xsi:type="characteristics:EnumCharacteristic" id="_HJ5M4NBFEeykT8lW6Zetnw"/>
+</characteristics:Characteristics>

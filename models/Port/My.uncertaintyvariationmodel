@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UncertaintyVariationModel:UncertaintyVariations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://palladiosimulator.org/dataflow/dictionary/characterized/1.0" xmlns:UncertaintyVariationModel="http://palladiosimulator.org/pcm/UncertaintyVariationModel/v0" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:characteristics="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/characteristics" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler" entityName="Port Communction System Allocation">
+    <varyingSubjects xsi:type="allocation:AllocationContext" href="source/default.allocation#_JzoIQCqOEeyQUZAfFpKaVQ"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_p-rI4CqNEeyQUZAfFpKaVQ"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_2k_JICqNEeyQUZAfFpKaVQ"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.AllocationStateHandler" entityName="Custom System Allocation">
+    <varyingSubjects xsi:type="allocation:AllocationContext" href="source/default.allocation#_KNVowCqOEeyQUZAfFpKaVQ"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_tHR4kCqNEeyQUZAfFpKaVQ"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="resourceenvironment:ResourceContainer" href="source/My.resourceenvironment#_2k_JICqNEeyQUZAfFpKaVQ"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Branch Actions">
+    <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_zOM4sCp7EeyQUZAfFpKaVQ"/>
+    <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_677HcCp9EeyQUZAfFpKaVQ"/>
+    <varyingSubjects xsi:type="seff:BranchAction" href="source/default.repository#_r6hOc2DbEeyl27SGknjUFw"/>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.BranchStateHandler" entityName="Inpection">
+    <varyingSubjects xsi:type="usagemodel:Branch" href="source/default.usagemodel#_KAECwCqDEeyQUZAfFpKaVQ"/>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.AssemblyStateHandler" entityName="ShipplingLine Assembly">
+    <varyingSubjects xsi:type="composition:AssemblyContext" href="source/portSystem.system#_8QhVICp4EeyXVNg0kfeznA"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="repository:BasicComponent" href="source/default.repository#_hEDOsCp2EeyXVNg0kfeznA"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:PrimitiveValue">
+        <link xsi:type="repository:BasicComponent" href="source/default.repository#_7L8UkGGgEey0vMuch9XqAA"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
+  <variationPoints stateHandlerId="org.palladiosimulator.pcm.uncertainty.variation.UncertaintyVariationModel.gen.pcm.statespace.statehandler.pcm.CharacteristicsStateHandler" entityName="Role Assignment">
+    <varyingSubjects xsi:type="characteristics:EnumCharacteristic" href="source/default.usagemodel.characteristics#_1rJpUFUaEeyrUraeOvF0jg"/>
+    <variationDescription>
+      <targetVariations xsi:type="UncertaintyVariationModel:ValueCollection">
+        <links xsi:type="DataDictionaryCharacterized:Literal" href="source/pcs.pddc#_aBLOEFBjEeyJN45tl5CnJQ-characteristicEnumerations@0.literals@1"/>
+      </targetVariations>
+      <targetVariations xsi:type="UncertaintyVariationModel:ValueCollection">
+        <links xsi:type="DataDictionaryCharacterized:Literal" href="source/pcs.pddc#_aBLOEFBjEeyJN45tl5CnJQ-characteristicEnumerations@0.literals@4"/>
+        <links xsi:type="DataDictionaryCharacterized:Literal" href="source/pcs.pddc#_aBLOEFBjEeyJN45tl5CnJQ-characteristicEnumerations@0.literals@0"/>
+      </targetVariations>
+    </variationDescription>
+  </variationPoints>
+</UncertaintyVariationModel:UncertaintyVariations>
